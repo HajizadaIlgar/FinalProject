@@ -1,0 +1,18 @@
+﻿@using TaskManagementSystem.BL.DTOs.ReminderDTOs
+@model DateReminderDto
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h4>Add Reminder</h4>
+<form method="post" >
+    <label asp-for="TimeBefore">Reminder Date:</label>
+    <input asp-for="TimeBefore" type="datetime-local" />
+
+    <label asp-for="Message">Message:</label>
+    <input asp-for="Message" type="text" />
+
+
+    <button type="submit">Add Reminder</button>
+</form>
+

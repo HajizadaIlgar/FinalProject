@@ -1,0 +1,13 @@
+C:\Users\Ilqar\Desktop\Final Project\TaskManagementSystem\TaskManagementSystem.CORE\bin\Debug\net8.0\TaskManagementSystem.CORE.deps.json
+C:\Users\Ilqar\Desktop\Final Project\TaskManagementSystem\TaskManagementSystem.CORE\bin\Debug\net8.0\TaskManagementSystem.CORE.dll
+C:\Users\Ilqar\Desktop\Final Project\TaskManagementSystem\TaskManagementSystem.CORE\bin\Debug\net8.0\TaskManagementSystem.CORE.pdb
+C:\Users\Ilqar\Desktop\Final Project\TaskManagementSystem\TaskManagementSystem.CORE\obj\Debug\net8.0\TaskManagementSystem.CORE.csproj.AssemblyReference.cache
+C:\Users\Ilqar\Desktop\Final Project\TaskManagementSystem\TaskManagementSystem.CORE\obj\Debug\net8.0\TaskManagementSystem.CORE.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ilqar\Desktop\Final Project\TaskManagementSystem\TaskManagementSystem.CORE\obj\Debug\net8.0\TaskManagementSystem.CORE.AssemblyInfoInputs.cache
+C:\Users\Ilqar\Desktop\Final Project\TaskManagementSystem\TaskManagementSystem.CORE\obj\Debug\net8.0\TaskManagementSystem.CORE.AssemblyInfo.cs
+C:\Users\Ilqar\Desktop\Final Project\TaskManagementSystem\TaskManagementSystem.CORE\obj\Debug\net8.0\TaskManagementSystem.CORE.csproj.CoreCompileInputs.cache
+C:\Users\Ilqar\Desktop\Final Project\TaskManagementSystem\TaskManagementSystem.CORE\obj\Debug\net8.0\TaskManagementSystem.CORE.sourcelink.json
+C:\Users\Ilqar\Desktop\Final Project\TaskManagementSystem\TaskManagementSystem.CORE\obj\Debug\net8.0\TaskManagementSystem.CORE.dll
+C:\Users\Ilqar\Desktop\Final Project\TaskManagementSystem\TaskManagementSystem.CORE\obj\Debug\net8.0\refint\TaskManagementSystem.CORE.dll
+C:\Users\Ilqar\Desktop\Final Project\TaskManagementSystem\TaskManagementSystem.CORE\obj\Debug\net8.0\TaskManagementSystem.CORE.pdb
+C:\Users\Ilqar\Desktop\Final Project\TaskManagementSystem\TaskManagementSystem.CORE\obj\Debug\net8.0\ref\TaskManagementSystem.CORE.dll

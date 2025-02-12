@@ -1,0 +1,17 @@
+/**
+ * lucide v0.244.0 - ISC
+ */
+
+import defaultAttributes from '../defaultAttributes.js';
+
+const ChevronsDown = [
+  "svg",
+  defaultAttributes,
+  [
+    ["polyline", { points: "7 13 12 18 17 13" }],
+    ["polyline", { points: "7 6 12 11 17 6" }]
+  ]
+];
+
+export { ChevronsDown as default };
+//# sourceMappingURL=chevrons-down.js.map

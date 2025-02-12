@@ -1,0 +1,330 @@
+﻿@using TaskManagementSystem.CORE.Entities.Users
+@model IEnumerable<AppUser>
+
+@{
+    ViewData["Title"] = "Chat";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/7.0.5/signalr.min.js"></script>
+    <style>
+        /* Ümumi səhifə dizaynı */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7fafc;
+        }
+
+        main {
+            display: flex;
+            height: 100vh;
+        }
+
+        /* Sol tərəf - İstifadəçilər */
+        #user-list {
+            width: 25%;
+            background-color: #f7fafc;
+            padding: 16px;
+            border-right: 2px solid #e2e8f0;
+            overflow-y: auto;
+        }
+
+            #user-list .status {
+                margin-left: auto;
+            }
+
+                #user-list .status.text-success {
+                    color: green;
+                }
+
+                #user-list .status.text-danger {
+                    color: red;
+                }
+
+            #user-list img {
+                border-radius: 50%;
+            }
+
+        /* Sağ tərəf - Chat Bölməsi */
+        #chat-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 16px;
+            background-color: white;
+        }
+
+        /* Mesajlar listi */
+        #message-list {
+            background: linear-gradient(to right, #3b82f6, #9333ea, #ec4899); /* Gradient rəng */
+            border-radius: 0.75rem; /* Yuvarlaq künclər */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Dərin kölgə */
+            padding: 0.5rem; /* İçi boşluq */
+            margin-bottom: 1rem; /* Alt boşluq */
+            max-height: 400px; /* Maksimum hündürlük */
+            overflow-y: auto; /* Təkcə şaquli skroll */
+        }
+
+        .message {
+            display: flex;
+            gap: 8px;
+            align-items: flex-start;
+            padding: 10px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 40%; /* Mesajların maksimum eni */
+            margin-bottom: 8px; /* Mesajların arasında məsafə */
+        }
+
+            .message.sent {
+                align-self: flex-end; /* Sənin mesajlarını sağ tərəfə göndər */
+                background-color: #d1e7ff; /* Sənin mesajlarının rəngi */
+            }
+
+            .message.received {
+                align-self: flex-start; /* Qarşı tərəfin mesajları solda */
+                background-color: #f1f1f1; /* Qarşı tərəfin mesajlarının rəngi */
+            }
+
+            .message img {
+                max-width: 40px; /* Profil şəkli daha kiçik */
+                border-radius: 50%;
+            }
+
+        .message-content {
+            max-width: 85%; /* Məzmunun genişliyi */
+            word-wrap: break-word;
+        }
+
+
+        /* Mesaj göndərmə qutusu */
+        #chat-form {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            padding: 8px;
+            border-top: 1px solid #e2e8f0;
+            background-color: #f7fafc;
+        }
+
+            #chat-form input {
+                flex: 1;
+                padding: 12px;
+                border-radius: 12px;
+                border: 1px solid #d1d5db;
+                font-size: 14px;
+            }
+
+            #chat-form button {
+                padding: 12px 16px;
+                background-color: #3182ce;
+                color: white;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+            }
+
+                #chat-form button:hover {
+                    background-color: #2b6cb0;
+                }
+
+        /* Mesajların stilini fərdiləşdirmək */
+        .message img {
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+        }
+
+        .message div {
+            flex: 1;
+        }
+
+        .message strong {
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+    </style>
+</head>
+<body>
+    <main class="flex p-6 h-screen">
+            <!-- Sol tərəf: İstifadəçilər -->
+        <div id="user-list" class="w-1/4 bg-gray-100 p-4 overflow-y-auto border-r-2">
+                <h3 class="font-semibold text-xl mb-4">Online Users</h3>
+                @foreach (var user in Model)
+                {
+                <div  class="flex items-center gap-2 py-2 px-4 border-b" data-user-id="@user.Id">
+                        <img src="~/account/@user.ProfileImagerlUrl"
+                             onerror="this.src='/account/default'"
+                             class="rounded-full h-10"
+                             alt="@user.UserName">
+                        <span class="font-semibold">@user.UserName</span>
+                    <span  class="status text-danger">Offline</span>
+                    </div>
+                }
+            </div>
+
+        <!-- Sağ tərəf: Chat Bölməsi -->
+        <div id="chat-section" class="w-3/4 bg-white p-4 flex flex-col h-full">
+            <!-- Mesajlar -->
+            <div id="message-list" class="flex-1 space-y-2 overflow-y-auto mb-4 p-2 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-lg shadow-xl">
+            </div>
+
+
+
+            <!-- Mesaj Göndərmə Box -->
+            <form id="chat-form" class="flex items-center gap-2">
+                <input id="message-input" type="text" placeholder="Enter your text" required class="w-full p-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                <button type="submit" class="bg-blue-500 text-white p-2 rounded-lg hover:bg-blue-700 focus:outline-none">Send</button>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", async () => {
+            const connection = new signalR.HubConnectionBuilder()
+                .withUrl("/chatHub")
+                .configureLogging(signalR.LogLevel.Information)
+                .build();
+
+            let currentUser = null;
+
+            async function getCurrentUser() {
+                try {
+                    const response = await fetch("/api/user/current");
+                    if (!response.ok) throw new Error("İstifadəçi tapılmadı");
+                    const user = await response.json();
+                    return user.userName 
+                } catch (error) {
+                    console.error("İstifadəçi məlumatı alınmadı:", error);
+                    return "Anonymous";
+                }
+            }
+            connection.on("UserOnline", (userName) => {
+                console.log(`User Online: ${userName}`);
+                const userElement = document.querySelector(`[data-user-id="${userName}"]`);
+                if (userElement) {
+                    const statusElement = userElement.querySelector(".status");
+                    if (statusElement) {
+                        statusElement.classList.remove("text-danger");
+                        statusElement.classList.add("text-success");
+                        statusElement.textContent = "Online";
+                    }
+                }
+            });
+
+            connection.on("UserOffline", (userName) => {
+                console.log(`User Offline: ${userName}`);
+                const userElement = document.querySelector(`[data-user-id="${userName}"]`);
+                if (userElement) {
+                    const statusElement = userElement.querySelector(".status");
+                    if (statusElement) {
+                        statusElement.classList.remove("text-success");
+                        statusElement.classList.add("text-danger");
+                        statusElement.textContent = "Offline";
+                    }
+                }
+            });
+
+            connection.on("ReceiveOnlineUsers", (onlineUsers) => {
+                console.log("Received online users:", onlineUsers);
+
+                // Bütün istifadəçiləri gizlətmək
+                const userList = document.getElementById("user-list");
+                userList.innerHTML = '';  // Mövcud siyahını təmizlə
+
+                // Yalnız online istifadəçiləri siyahıya əlavə et
+                onlineUsers.forEach(user => {
+                    const userElement = document.createElement("div");
+                    userElement.classList.add("flex", "items-center", "gap-2", "py-2", "px-4", "border-b");
+                    userElement.setAttribute("data-user-id", user);
+
+                    // Profil şəkli və adı
+                    const profileImage = document.createElement("img");
+                    profileImage.src = `/account/${user.profileImageUrl}`;
+                    profileImage.classList.add("rounded-full", "h-10", "w-10");
+                    profileImage.onerror = () => profileImage.src = '/account/mxelvvic.d55images.jpg';  // Yükləmə uğursuz olarsa
+
+                    const username = document.createElement("span");
+                    username.classList.add("font-semibold");
+                    username.textContent = user;
+
+                    const status = document.createElement("span");
+                    status.classList.add("status", "text-success");
+                    status.textContent = "Online";
+
+                    userElement.appendChild(profileImage);
+                    userElement.appendChild(username);
+                    userElement.appendChild(status);
+
+                    userList.appendChild(userElement);
+                });
+            });
+
+            connection.on("ReceiveMessage", (user, message, profileImageUrl) => {
+                console.log('Received message:', user, message, profileImageUrl);
+                const messageList = document.getElementById("message-list");
+                if (messageList) {
+                    const messageElement = document.createElement("div");
+                    messageElement.classList.add("message");
+
+                    // Profil şəkli əlavə edilir
+                    const profileImage = document.createElement("img");
+                    profileImage.src = profileImageUrl ? `/account/${profileImageUrl}` : "/account/mxelvvic.d55images.jpg";
+                    profileImage.onerror = function () {
+                        profileImage.src = "/account/default.jpg";  // Yükləmə uğursuz olarsa
+                    };
+
+                    // Mesaj və istifadəçi adı
+                    const messageContent = document.createElement("div");
+                    messageContent.classList.add("message-content");
+                    messageContent.innerHTML = `<strong>${user}:</strong> ${message}`;
+
+                    // Mesajın kimə aid olduğunu təyin edirik
+                    const isSentByUser = user === "CurrentUser";  // Burada "CurrentUser" yerinə real istifadəçi adı ilə müqayisə edə bilərsiniz
+                    if (isSentByUser) {
+                        messageElement.classList.add("sent");
+                    } else {
+                        messageElement.classList.add("received");
+                    }
+
+                    // Şəkil və məzmunu mesaj elementinə əlavə etmək
+                    messageElement.appendChild(profileImage);
+                    messageElement.appendChild(messageContent);
+
+                    messageList.appendChild(messageElement);
+                    messageList.scrollTop = messageList.scrollHeight;  // Mesajın sonuna qədər skroll edirik
+                }
+            });
+
+            try {
+                currentUser = await getCurrentUser();
+                await connection.start();
+                console.log("SignalR bağlantısı uğurla quruldu!");
+                await connection.invoke("GetOnlineUsers");
+            } catch (err) {
+                console.error("SignalR bağlantısı alınmadı:", err);
+            }
+
+            document.getElementById("chat-form").addEventListener("submit", async event => {
+                event.preventDefault();
+                const messageInput = document.getElementById("message-input");
+                if (messageInput.value.trim() !== "") {
+                    try {
+                        await connection.invoke("SendMessage", currentUser, messageInput.value.trim());
+                        messageInput.value = "";
+                    } catch (err) {
+                        console.error("Mesaj göndərilərkən xəta:", err);
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

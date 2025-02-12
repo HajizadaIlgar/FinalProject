@@ -1,0 +1,115 @@
+﻿@model LoginDto
+
+
+@{
+    ViewData["Title"] = "Login";
+    Layout = null;
+}
+
+<style>
+    /*style.css*/
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: sans-serif;
+        line-height: 1.5;
+        min-height: 100vh;
+        background: #f3f3f3;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .main {
+        background-color: #fff;
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        padding: 10px 20px;
+        transition: transform 0.2s;
+        width: 500px;
+        text-align: center;
+    }
+
+    h1 {
+        color: #4CAF50;
+    }
+
+    label {
+        display: block;
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        text-align: left;
+        color: #555;
+        font-weight: bold;
+    }
+
+    input {
+        display: block;
+        width: 100%;
+        margin-bottom: 15px;
+        padding: 10px;
+        box-sizing: border-box;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+    button {
+        padding: 15px;
+        border-radius: 10px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        border: none;
+        color: white;
+        cursor: pointer;
+        background-color: #4CAF50;
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+</style>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HTML Login Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main">
+        <h1>GeeksforGeeks</h1>
+        <h3>Enter your login credentials</h3>
+        <div asp-validation-summary="ModelOnly"></div>
+        <form id="dds" method="post" enctype="multipart/form-data">
+            <div class="input-box">
+                <label asp-for="UserNameOrEmail"></label>
+                <span asp-validation-for="UserNameOrEmail"> </span>
+                <input asp-for="UserNameOrEmail" type="text" placeholder="Enter your email" required>
+            </div>
+            <div class="input-box">
+                <label asp-for="Password"></label>
+                <span asp-validation-for="Password"> </span>
+                <input asp-for="Password" type="password" placeholder="Create password" required>
+            </div>
+            <div class="btn btn-danger">
+                <button id="dds" type="submit" class="w-100 btn btn-lg btn-primary py-2 aos-item" data-aos="fade-up">Register</button>
+            </div>
+        </form>
+
+        <p>
+            <a asp-action="Register" asp-controller="Account" style="text-decoration: none;">
+                Hesabin yoxdursa Qeydiyyatdan kec 
+            </a>
+        </p>
+    </div>
+</body>
+
+</html>

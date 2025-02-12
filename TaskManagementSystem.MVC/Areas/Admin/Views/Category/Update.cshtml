@@ -1,0 +1,19 @@
+﻿@model Category
+@{
+    ViewData["Title"] = "Update";
+}
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Slider create</h6>
+    </div>
+    <div class="card-body">
+        <form enctype="multipart/form-data" method="post">
+            <div class="form-group">
+                <label asp-for="Name"></label>
+                <input value="@Model.Name" class="form-control" asp-for="Name">
+                <span class="text-danger" asp-validation-for="Name"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>

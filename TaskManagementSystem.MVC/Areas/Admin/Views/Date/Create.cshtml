@@ -1,0 +1,36 @@
+﻿@using TaskManagementSystem.BL.DTOs.DatePlannerDTOs
+@model DateCreateDto
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<h4>Create Appointment</h4>
+<form method="post" asp-action="Create" asp-controller="Date">
+    <label asp-for="DateName">Date Name:</label>
+    <input asp-for="DateName" type="text" />
+
+    <label asp-for="Description">Description:</label>
+    <textarea asp-for="Description"></textarea>
+
+    <label asp-for="StartDate">Start Date:</label>
+    <input asp-for="StartDate" type="datetime-local" />
+
+    <label asp-for="EndDate">End Date:</label>
+    <input asp-for="EndDate" type="datetime-local" />
+
+    <label asp-for="Location">Location:</label>
+    <input asp-for="Location" type="text" />
+
+    <label asp-for="Reminders">Reminders:</label>
+    <textarea asp-for="Reminders"></textarea>
+
+    <label asp-for="Host">Host:</label>
+    <input asp-for="Host" type="text" />
+
+    <label asp-for="Notes">Notes:</label>
+    <textarea asp-for="Notes"></textarea>
+
+    <button type="submit">Create</button>
+</form>
+
