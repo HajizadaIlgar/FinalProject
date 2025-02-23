@@ -10,9 +10,11 @@ namespace TaskManagementSystem.BL.DTOs.DatePlannerDTOs
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public string? Location { get; set; }
-        public List<DateReminder> Reminders { get; set; }
+        public List<DateReminder> Reminders { get; set; }=new List<DateReminder> { };
+        public int ReminderId { get; set; }
         public DateStatus Status { get; set; }
         public string Host { get; set; }
         public string? Notes { get; set; }
+        public string? HostEmail { get; set; }
     }
 }

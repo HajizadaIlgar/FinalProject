@@ -1,0 +1,38 @@
+﻿@using TaskManagementSystem.CORE.Entities.Notfications
+@model List<DateReminder>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Brand</h6>
+        <a class="btn btn-primary" asp-controller="Reminder" asp-action="Create">Yarat</a>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Remind Date</th>
+                        <th>Message</th>
+                        <th style="text-align:center" colspan="2">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Id</td>
+                            <td>@item.TimeBefore</td>
+                            <td>@item.Message</td>
+                            <td><a class="btn btn-success" asp-controller="Category" asp-action="Update" asp-route-id="@item.Id">Dəyiş</a></td>
+                            <td><a class="btn btn-danger" asp-controller="Category" asp-action="Delete" asp-route-id="@item.Id">Sil</a></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

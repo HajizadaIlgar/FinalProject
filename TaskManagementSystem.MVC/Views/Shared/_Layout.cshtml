@@ -1,5 +1,6 @@
-﻿@using TaskManagementSystem.CORE.Entities.Users
-@model List<AppUser>
+﻿@using TaskManagementSystem.BL.DTOs.HomeDTOs
+@using TaskManagementSystem.CORE.Entities.Users
+@model HomeDto
 <!DOCTYPE html>
 <html lang="en">
 
@@ -85,7 +86,7 @@
                     <li class="menu-title">Apps</li>
 
                     <li class="menu-item">
-                        <a href="apps-calendar.html" class="menu-link">
+                        <a asp-controller="Home" asp-action="Calendar" class="menu-link">
                             <span class="menu-icon">
                                 <i class="ri-calendar-event-line"></i>
                             </span>
@@ -148,7 +149,7 @@
                     </li>
 
                     <li class="menu-item">
-                        <a href="apps-kanban.html" class="menu-link">
+                        <a asp-controller="Home" asp-action="KanbanBoard" class="menu-link">
                             <span class="menu-icon">
                                 <i class="ri-list-check-3"></i>
                             </span>
@@ -869,7 +870,7 @@
 
 
 
-                        @foreach (var item in Model)
+                        @foreach (var item in Model.AppUsers)
                         {
                         <!-- item-->
                         <a asp-action="Chat" asp-controller="Home" asp-route-id="@item.Id" class="flex items-center py-2 px-3 text-sm text-gray-800 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300">
@@ -1113,7 +1114,7 @@
                     <div class="relative">
                         @* Yalnız aktiv hesabı göstər *@
                         @{
-                            var activeUser = Model.FirstOrDefault(u => u.UserName == User.Identity.Name);
+                            var activeUser = Model.AppUsers.FirstOrDefault(u => u.UserName == User.Identity.Name);
                             if (activeUser != null)
                             {
                                 <button data-fc-type="dropdown" data-fc-placement="bottom-end" type="button" class="nav-link flex items-center gap-2.5 px-3 bg-black/5 border-x border-black/10">
@@ -1375,6 +1376,12 @@
 
     <!-- Dashboard App js -->
     <script src="~/assets/js/pages/dashboard.js"></script>
+
+    <!-- Fullcalendar Plugin Js -->
+    <script src="~/assets/libs/fullcalendar/index.global.min.js"></script>
+
+    <!-- Calendar Js -->
+        <script src="~/assets/js/pages/apps-calendar.js"></script>
 </body>
 
 </html>

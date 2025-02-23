@@ -1,5 +1,5 @@
-﻿@using TaskManagementSystem.CORE.Entities.Users
-@model IEnumerable<AppUser>
+﻿@using TaskManagementSystem.BL.DTOs.HomeDTOs
+@model HomeDto
 
 @{
     ViewData["Title"] = "Chat";
@@ -157,7 +157,7 @@
             <!-- Sol tərəf: İstifadəçilər -->
         <div id="user-list" class="w-1/4 bg-gray-100 p-4 overflow-y-auto border-r-2">
                 <h3 class="font-semibold text-xl mb-4">Online Users</h3>
-                @foreach (var user in Model)
+                @foreach (var user in Model.AppUsers)
                 {
                 <div  class="flex items-center gap-2 py-2 px-4 border-b" data-user-id="@user.Id">
                         <img src="~/account/@user.ProfileImagerlUrl"

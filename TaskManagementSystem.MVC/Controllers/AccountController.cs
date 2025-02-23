@@ -12,7 +12,7 @@ namespace TaskManagementSystem.MVC.Controllers
 {
     public class AccountController(IWebHostEnvironment _env, UserManager<AppUser> _userManager, SignInManager<AppUser> _signInManager, RoleManager<IdentityRole> _roleManager, IHubContext<ChatHub> _hubContext, ICategoryService _service) : Controller
     {
-        public bool IsAuthenticated => HttpContext?.User.Identity.IsAuthenticated ?? false;
+        public bool IsAuthenticated => HttpContext?.User.Identity!.IsAuthenticated ?? false;
         public IActionResult Register()
         {
             return View();

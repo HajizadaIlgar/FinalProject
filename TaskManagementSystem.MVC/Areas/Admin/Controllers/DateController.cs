@@ -1,18 +1,19 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using TaskManagementSystem.BL.DTOs.DatePlannerDTOs;
-using TaskManagementSystem.CORE.Entities.Notfications;
+using TaskManagementSystem.BL.Services.Abstracts;
 using TaskManagementSystem.CORE.Entities.Plans;
+using TaskManagementSystem.CORE.Enums;
 using TaskManagementSystem.DAL.Contexts;
 
 namespace TaskManagementSystem.MVC.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class DateController(TaskManagementDbContext _context) : Controller
+    public class DateController(TaskManagementDbContext _context, IEmailService _emailService) : Controller
     {
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            return View(await _context.Appointments.ToListAsync());
         }
         public async Task<IActionResult> Create()
         {
@@ -28,52 +29,35 @@ namespace TaskManagementSystem.MVC.Areas.Admin.Controllers
                 StartDate = dto.StartDate,
                 EndDate = dto.EndDate,
                 Location = dto.Location,
-                Reminders = dto.Reminders,
                 Host = dto.Host,
-                Notes = dto.Notes
+                Notes = dto.Notes,
+                Status = DateStatus.Scheduled,
+                HostEmail = dto.HostEmail,
             };
+
             await _context.AddAsync(appointment);
             await _context.SaveChangesAsync();
+
+            string emailBody = $@"
+            <h3>Görüş Detalları</h3>
+            <p>Görüşün Adı: {dto.DateName}</p>
+            <p>Təsvir: {dto.Description}</p>
+            <p>Başlama tarixi: {dto.StartDate}</p>
+            <p>Yer: {dto.Location}</p>
+            <p>Təşkilatçı: {dto.Host}</p>";
+
+            _emailService.SendEMail(dto.HostEmail!, "Yeni Görüş Təyin Edildi", emailBody);
+
             return RedirectToAction(nameof(Index));
         }
-        public void AddReminderToAppointment(int appointmentId, DateTime timeBefore, string message)
+        public async Task<IActionResult> Delete(int? id)
         {
-            var appointment = _context.Appointments
-                .Include(a => a.Reminders) // Appointment ilə Reminder-ləri birlikdə yüklə
-                .FirstOrDefault(a => a.Id == appointmentId);
-
-            if (appointment != null)
-            {
-                var reminder = new DateReminder
-                {
-                    AppointmentId = appointmentId,
-                    TimeBefore = timeBefore,
-                    Message = message
-                };
-                appointment.Reminders.Add(reminder);
-                _context.SaveChanges(); // Database-ə dəyişikliyi yadda saxla
-            }
-        }
-        public List<DateReminder> GetRemindersForAppointment(int appointmentId)
-        {
-            return _context.Reminders
-                .Where(r => r.AppointmentId == appointmentId)
-                .ToList();
-        }
-        public void CheckAndSendReminders()
-        {
-            var now = DateTime.Now;
-
-            var reminders = _context.Reminders
-                .Include(r => r.Appointment)
-                .Where(r => r.Appointment.StartDate.AddMinutes(-r.TimeBefore.Minute) <= now)
-                .ToList();
-
-            foreach (var reminder in reminders)
-            {
-                // Burada istifadəçiyə xəbərdarlıq göndərə bilərsən
-                Console.WriteLine($"Reminder: {reminder.Message} - Görüş: {reminder.Appointment.DateName}");
-            }
+            if (id == null) return BadRequest();
+            var data = await _context.Appointments.Where(x => x.Id == id).FirstOrDefaultAsync();
+            if (data == null) return BadRequest();
+            _context.Appointments.Remove(data);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
         }
 
     }

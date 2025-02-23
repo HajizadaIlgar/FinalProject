@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using TaskManagementSystem.BL.ExternalService;
 using TaskManagementSystem.BL.Services.Abstracts;
 using TaskManagementSystem.BL.Services.Implements;
 using TaskManagementSystem.CORE.Repositories;
@@ -17,7 +18,8 @@ public static class ServiceRegistiration
     {
         services.AddScoped<ICategoryRepository, CategoryRepository>();
         services.AddScoped<ICategoryService, CategoryService>();
-
+        services.AddScoped<IEmailService, EmailService>();
+        services.AddHostedService<ReminderCheckService>();
         return services;
     }
 }

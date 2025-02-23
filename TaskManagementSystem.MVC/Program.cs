@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using TaskManagementSystem.BL;
+using TaskManagementSystem.BL.Helpers;
 using TaskManagementSystem.CORE.Entities.Users;
 using TaskManagementSystem.DAL.Contexts;
 using TaskManagementSystem.MVC.SignalR.Hubs;
@@ -22,6 +23,9 @@ builder.Services.AddIdentity<AppUser, IdentityRole>(opt =>
     opt.Lockout.AllowedForNewUsers = false;
     opt.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(1);
 }).AddDefaultTokenProviders().AddEntityFrameworkStores<TaskManagementDbContext>();
+
+var opt = new SmtpOption();
+builder.Services.Configure<SmtpOption>(builder.Configuration.GetSection(SmtpOption.Name));
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddServices();

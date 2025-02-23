@@ -4,33 +4,103 @@
     ViewData["Title"] = "Create";
 }
 
+<h4 class="form-title">Create Appointment</h4>
+<form method="post" asp-action="Create" asp-controller="Date" class="form-container">
+    <div class="form-group">
+        <label asp-for="DateName">Date Name:</label>
+        <input asp-for="DateName" type="text" />
+    </div>
 
-<h4>Create Appointment</h4>
-<form method="post" asp-action="Create" asp-controller="Date">
-    <label asp-for="DateName">Date Name:</label>
-    <input asp-for="DateName" type="text" />
+    <div class="form-group">
+        <label asp-for="Description">Description:</label>
+        <textarea asp-for="Description"></textarea>
+    </div>
 
-    <label asp-for="Description">Description:</label>
-    <textarea asp-for="Description"></textarea>
+    <div class="form-group">
+        <label asp-for="StartDate">Start Date:</label>
+        <input asp-for="StartDate" type="datetime-local" />
+    </div>
 
-    <label asp-for="StartDate">Start Date:</label>
-    <input asp-for="StartDate" type="datetime-local" />
+    <div class="form-group">
+        <label asp-for="EndDate">End Date:</label>
+        <input asp-for="EndDate" type="datetime-local" />
+    </div>
 
-    <label asp-for="EndDate">End Date:</label>
-    <input asp-for="EndDate" type="datetime-local" />
+    <div class="form-group">
+        <label asp-for="Location">Location:</label>
+        <input asp-for="Location" type="text" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Host">Host:</label>
+        <input asp-for="Host" type="text" />
+    </div>
 
-    <label asp-for="Location">Location:</label>
-    <input asp-for="Location" type="text" />
+    <div class="form-group">
+        <label asp-for="HostEmail">Email:</label>
+        <input asp-for="HostEmail" type="email"/>
+    </div>
 
-    <label asp-for="Reminders">Reminders:</label>
-    <textarea asp-for="Reminders"></textarea>
+    <div class="form-group">
+        <label asp-for="Notes">Notes:</label>
+        <textarea asp-for="Notes"></textarea>
+    </div>
 
-    <label asp-for="Host">Host:</label>
-    <input asp-for="Host" type="text" />
-
-    <label asp-for="Notes">Notes:</label>
-    <textarea asp-for="Notes"></textarea>
-
-    <button type="submit">Create</button>
+    <button type="submit" class="submit-button">Create</button>
 </form>
 
+<style>
+    .form-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+
+    .form-container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-group label {
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="datetime-local"],
+    textarea {
+        width: 100%;
+        padding: 10px;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    textarea {
+        height: 80px;
+    }
+
+    .submit-button {
+        padding: 10px 20px;
+        font-size: 1rem;
+        color: #fff;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .submit-button:hover {
+        background-color: #0056b3;
+    }
+</style>

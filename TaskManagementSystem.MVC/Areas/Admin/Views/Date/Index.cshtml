@@ -1,7 +1,112 @@
-﻿
+﻿@using TaskManagementSystem.BL.DTOs.DatePlannerDTOs
+@using TaskManagementSystem.CORE.Entities.Plans
+@model IEnumerable<Appointment>
+
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Appointment List";
 }
 
-<h1>Index</h1>
+<h4 class="list-title">Appointment List</h4>
 
+    <a style="margin-left:153px" href="@Url.Action("Create", "Date")" class="create-button">Create New Appointment</a><br />
+<table class="table-container">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Date Name</th>
+            <th>Description</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Location</th>
+            <th>Host</th>
+            <th>Email</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.DateName</td>
+                <td>@item.Description</td>
+                <td>@item.StartDate.ToString("yyyy-MM-dd HH:mm")</td>
+                <td>@item.EndDate.ToString("yyyy-MM-dd HH:mm")</td>
+                <td>@item.Location</td>
+                <td>@item.Host</td>
+                <td>@item.HostEmail</td>
+                <td>
+                    <a href="@Url.Action("Edit", "Date", new { id = item.Id })" class="action-button">Edit</a>
+                    <a href="@Url.Action("Delete", "Date", new { id = item.Id })" class="action-button delete">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<style>
+    .list-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .table-container {
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto 20px;
+        border-collapse: collapse;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .table-container th,
+    .table-container td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: left;
+    }
+
+    .table-container th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+    }
+
+    .action-button {
+        padding: 5px 10px;
+        font-size: 0.9rem;
+        color: #fff;
+        text-decoration: none;
+        background-color: #007bff;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .action-button:hover {
+        background-color: #0056b3;
+    }
+
+    .action-button.delete {
+        background-color: #dc3545;
+    }
+
+    .action-button.delete:hover {
+        background-color: #c82333;
+    }
+
+    .create-button {
+        display: block;
+        width: fit-content;
+        padding: 10px 20px;
+        font-size: 1rem;
+        color: #fff;
+        background-color: #28a745;
+        text-decoration: none;
+        border-radius: 5px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .create-button:hover {
+        background-color: #218838;
+    }
+</style>

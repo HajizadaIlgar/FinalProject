@@ -3,72 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\Ilqar\\Desktop\\Final Project\\TaskManagementSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8817459D-E0CB-4974-966B-11911891F2E4}|TaskManagementSystem.MVC\\TaskManagementSystem.MVC.csproj|c:\\users\\ilqar\\desktop\\final project\\taskmanagementsystem\\taskmanagementsystem.mvc\\areas\\admin\\views\\date\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8817459D-E0CB-4974-966B-11911891F2E4}|TaskManagementSystem.MVC\\TaskManagementSystem.MVC.csproj|solutionrelative:taskmanagementsystem.mvc\\areas\\admin\\views\\date\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8817459D-E0CB-4974-966B-11911891F2E4}|TaskManagementSystem.MVC\\TaskManagementSystem.MVC.csproj|c:\\users\\ilqar\\desktop\\final project\\taskmanagementsystem\\taskmanagementsystem.mvc\\areas\\admin\\controllers\\datecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8817459D-E0CB-4974-966B-11911891F2E4}|TaskManagementSystem.MVC\\TaskManagementSystem.MVC.csproj|solutionrelative:taskmanagementsystem.mvc\\areas\\admin\\controllers\\datecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8817459D-E0CB-4974-966B-11911891F2E4}|TaskManagementSystem.MVC\\TaskManagementSystem.MVC.csproj|c:\\users\\ilqar\\desktop\\final project\\taskmanagementsystem\\taskmanagementsystem.mvc\\areas\\admin\\views\\date\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8817459D-E0CB-4974-966B-11911891F2E4}|TaskManagementSystem.MVC\\TaskManagementSystem.MVC.csproj|solutionrelative:taskmanagementsystem.mvc\\areas\\admin\\views\\date\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8817459D-E0CB-4974-966B-11911891F2E4}|TaskManagementSystem.MVC\\TaskManagementSystem.MVC.csproj|c:\\users\\ilqar\\desktop\\final project\\taskmanagementsystem\\taskmanagementsystem.mvc\\areas\\admin\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8817459D-E0CB-4974-966B-11911891F2E4}|TaskManagementSystem.MVC\\TaskManagementSystem.MVC.csproj|solutionrelative:taskmanagementsystem.mvc\\areas\\admin\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8817459D-E0CB-4974-966B-11911891F2E4}|TaskManagementSystem.MVC\\TaskManagementSystem.MVC.csproj|c:\\users\\ilqar\\desktop\\final project\\taskmanagementsystem\\taskmanagementsystem.mvc\\areas\\admin\\controllers\\remindercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8817459D-E0CB-4974-966B-11911891F2E4}|TaskManagementSystem.MVC\\TaskManagementSystem.MVC.csproj|solutionrelative:taskmanagementsystem.mvc\\areas\\admin\\controllers\\remindercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B4E14F9B-6B9E-4A12-B719-F35782D47247}|TaskManagementSystem.CORE\\TaskManagementSystem.CORE.csproj|c:\\users\\ilqar\\desktop\\final project\\taskmanagementsystem\\taskmanagementsystem.core\\entities\\commons\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4E14F9B-6B9E-4A12-B719-F35782D47247}|TaskManagementSystem.CORE\\TaskManagementSystem.CORE.csproj|solutionrelative:taskmanagementsystem.core\\entities\\commons\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B4E14F9B-6B9E-4A12-B719-F35782D47247}|TaskManagementSystem.CORE\\TaskManagementSystem.CORE.csproj|c:\\users\\ilqar\\desktop\\final project\\taskmanagementsystem\\taskmanagementsystem.core\\entities\\notfications\\datereminder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4E14F9B-6B9E-4A12-B719-F35782D47247}|TaskManagementSystem.CORE\\TaskManagementSystem.CORE.csproj|solutionrelative:taskmanagementsystem.core\\entities\\notfications\\datereminder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8817459D-E0CB-4974-966B-11911891F2E4}|TaskManagementSystem.MVC\\TaskManagementSystem.MVC.csproj|c:\\users\\ilqar\\desktop\\final project\\taskmanagementsystem\\taskmanagementsystem.mvc\\areas\\admin\\views\\reminder\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8817459D-E0CB-4974-966B-11911891F2E4}|TaskManagementSystem.MVC\\TaskManagementSystem.MVC.csproj|solutionrelative:taskmanagementsystem.mvc\\areas\\admin\\views\\reminder\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2ECA1F1B-C63D-4D23-BDDE-0ADE977840F0}|TaskManagementSystem.BL\\TaskManagementSystem.BL.csproj|c:\\users\\ilqar\\desktop\\final project\\taskmanagementsystem\\taskmanagementsystem.bl\\dtos\\reminderdtos\\datereminderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2ECA1F1B-C63D-4D23-BDDE-0ADE977840F0}|TaskManagementSystem.BL\\TaskManagementSystem.BL.csproj|solutionrelative:taskmanagementsystem.bl\\dtos\\reminderdtos\\datereminderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8817459D-E0CB-4974-966B-11911891F2E4}|TaskManagementSystem.MVC\\TaskManagementSystem.MVC.csproj|c:\\users\\ilqar\\desktop\\final project\\taskmanagementsystem\\taskmanagementsystem.mvc\\areas\\admin\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8817459D-E0CB-4974-966B-11911891F2E4}|TaskManagementSystem.MVC\\TaskManagementSystem.MVC.csproj|solutionrelative:taskmanagementsystem.mvc\\areas\\admin\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2ECA1F1B-C63D-4D23-BDDE-0ADE977840F0}|TaskManagementSystem.BL\\TaskManagementSystem.BL.csproj|c:\\users\\ilqar\\desktop\\final project\\taskmanagementsystem\\taskmanagementsystem.bl\\dtos\\dateplannerdtos\\datecreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2ECA1F1B-C63D-4D23-BDDE-0ADE977840F0}|TaskManagementSystem.BL\\TaskManagementSystem.BL.csproj|solutionrelative:taskmanagementsystem.bl\\dtos\\dateplannerdtos\\datecreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8817459D-E0CB-4974-966B-11911891F2E4}|TaskManagementSystem.MVC\\TaskManagementSystem.MVC.csproj|c:\\users\\ilqar\\desktop\\final project\\taskmanagementsystem\\taskmanagementsystem.mvc\\views\\home\\chat.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8817459D-E0CB-4974-966B-11911891F2E4}|TaskManagementSystem.MVC\\TaskManagementSystem.MVC.csproj|solutionrelative:taskmanagementsystem.mvc\\views\\home\\chat.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8817459D-E0CB-4974-966B-11911891F2E4}|TaskManagementSystem.MVC\\TaskManagementSystem.MVC.csproj|c:\\users\\ilqar\\desktop\\final project\\taskmanagementsystem\\taskmanagementsystem.mvc\\signalr\\hubs\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8817459D-E0CB-4974-966B-11911891F2E4}|TaskManagementSystem.MVC\\TaskManagementSystem.MVC.csproj|solutionrelative:taskmanagementsystem.mvc\\signalr\\hubs\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8817459D-E0CB-4974-966B-11911891F2E4}|TaskManagementSystem.MVC\\TaskManagementSystem.MVC.csproj|c:\\users\\ilqar\\desktop\\final project\\taskmanagementsystem\\taskmanagementsystem.mvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8817459D-E0CB-4974-966B-11911891F2E4}|TaskManagementSystem.MVC\\TaskManagementSystem.MVC.csproj|solutionrelative:taskmanagementsystem.mvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8817459D-E0CB-4974-966B-11911891F2E4}|TaskManagementSystem.MVC\\TaskManagementSystem.MVC.csproj|c:\\users\\ilqar\\desktop\\final project\\taskmanagementsystem\\taskmanagementsystem.mvc\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8817459D-E0CB-4974-966B-11911891F2E4}|TaskManagementSystem.MVC\\TaskManagementSystem.MVC.csproj|solutionrelative:taskmanagementsystem.mvc\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8817459D-E0CB-4974-966B-11911891F2E4}|TaskManagementSystem.MVC\\TaskManagementSystem.MVC.csproj|c:\\users\\ilqar\\desktop\\final project\\taskmanagementsystem\\taskmanagementsystem.mvc\\views\\home\\kanbanboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8817459D-E0CB-4974-966B-11911891F2E4}|TaskManagementSystem.MVC\\TaskManagementSystem.MVC.csproj|solutionrelative:taskmanagementsystem.mvc\\views\\home\\kanbanboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8817459D-E0CB-4974-966B-11911891F2E4}|TaskManagementSystem.MVC\\TaskManagementSystem.MVC.csproj|c:\\users\\ilqar\\desktop\\final project\\taskmanagementsystem\\taskmanagementsystem.mvc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8817459D-E0CB-4974-966B-11911891F2E4}|TaskManagementSystem.MVC\\TaskManagementSystem.MVC.csproj|solutionrelative:taskmanagementsystem.mvc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2ECA1F1B-C63D-4D23-BDDE-0ADE977840F0}|TaskManagementSystem.BL\\TaskManagementSystem.BL.csproj|c:\\users\\ilqar\\desktop\\final project\\taskmanagementsystem\\taskmanagementsystem.bl\\helpers\\chathelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2ECA1F1B-C63D-4D23-BDDE-0ADE977840F0}|TaskManagementSystem.BL\\TaskManagementSystem.BL.csproj|solutionrelative:taskmanagementsystem.bl\\helpers\\chathelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8817459D-E0CB-4974-966B-11911891F2E4}|TaskManagementSystem.MVC\\TaskManagementSystem.MVC.csproj|c:\\users\\ilqar\\desktop\\final project\\taskmanagementsystem\\taskmanagementsystem.mvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8817459D-E0CB-4974-966B-11911891F2E4}|TaskManagementSystem.MVC\\TaskManagementSystem.MVC.csproj|solutionrelative:taskmanagementsystem.mvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8817459D-E0CB-4974-966B-11911891F2E4}|TaskManagementSystem.MVC\\TaskManagementSystem.MVC.csproj|c:\\users\\ilqar\\desktop\\final project\\taskmanagementsystem\\taskmanagementsystem.mvc\\wwwroot\\assets\\js\\pages\\apps-calendar.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{8817459D-E0CB-4974-966B-11911891F2E4}|TaskManagementSystem.MVC\\TaskManagementSystem.MVC.csproj|solutionrelative:taskmanagementsystem.mvc\\wwwroot\\assets\\js\\pages\\apps-calendar.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8817459D-E0CB-4974-966B-11911891F2E4}|TaskManagementSystem.MVC\\TaskManagementSystem.MVC.csproj|c:\\users\\ilqar\\desktop\\final project\\taskmanagementsystem\\taskmanagementsystem.mvc\\views\\home\\calendar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8817459D-E0CB-4974-966B-11911891F2E4}|TaskManagementSystem.MVC\\TaskManagementSystem.MVC.csproj|solutionrelative:taskmanagementsystem.mvc\\views\\home\\calendar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8817459D-E0CB-4974-966B-11911891F2E4}|TaskManagementSystem.MVC\\TaskManagementSystem.MVC.csproj|c:\\users\\ilqar\\desktop\\final project\\taskmanagementsystem\\taskmanagementsystem.mvc\\views\\home\\chat.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8817459D-E0CB-4974-966B-11911891F2E4}|TaskManagementSystem.MVC\\TaskManagementSystem.MVC.csproj|solutionrelative:taskmanagementsystem.mvc\\views\\home\\chat.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8817459D-E0CB-4974-966B-11911891F2E4}|TaskManagementSystem.MVC\\TaskManagementSystem.MVC.csproj|c:\\users\\ilqar\\desktop\\final project\\taskmanagementsystem\\taskmanagementsystem.mvc\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8817459D-E0CB-4974-966B-11911891F2E4}|TaskManagementSystem.MVC\\TaskManagementSystem.MVC.csproj|solutionrelative:taskmanagementsystem.mvc\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8817459D-E0CB-4974-966B-11911891F2E4}|TaskManagementSystem.MVC\\TaskManagementSystem.MVC.csproj|c:\\users\\ilqar\\desktop\\final project\\taskmanagementsystem\\taskmanagementsystem.mvc\\areas\\admin\\controllers\\remindercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8817459D-E0CB-4974-966B-11911891F2E4}|TaskManagementSystem.MVC\\TaskManagementSystem.MVC.csproj|solutionrelative:taskmanagementsystem.mvc\\areas\\admin\\controllers\\remindercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -78,235 +42,112 @@
       "DocumentGroups": [
         {
           "DockedHeight": 25,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "ChatHelper.cs",
-              "DocumentMoniker": "C:\\Users\\Ilqar\\Desktop\\Final Project\\TaskManagementSystem\\TaskManagementSystem.BL\\Helpers\\ChatHelper.cs",
-              "RelativeDocumentMoniker": "TaskManagementSystem.BL\\Helpers\\ChatHelper.cs",
-              "ToolTip": "C:\\Users\\Ilqar\\Desktop\\Final Project\\TaskManagementSystem\\TaskManagementSystem.BL\\Helpers\\ChatHelper.cs",
-              "RelativeToolTip": "TaskManagementSystem.BL\\Helpers\\ChatHelper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-10T15:02:33.108Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Ilqar\\Desktop\\Final Project\\TaskManagementSystem\\TaskManagementSystem.MVC\\Areas\\Admin\\Views\\Date\\Index.cshtml",
-              "RelativeDocumentMoniker": "TaskManagementSystem.MVC\\Areas\\Admin\\Views\\Date\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Ilqar\\Desktop\\Final Project\\TaskManagementSystem\\TaskManagementSystem.MVC\\Areas\\Admin\\Views\\Date\\Index.cshtml",
-              "RelativeToolTip": "TaskManagementSystem.MVC\\Areas\\Admin\\Views\\Date\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Title": "KanbanBoard.cshtml",
+              "DocumentMoniker": "C:\\Users\\Ilqar\\Desktop\\Final Project\\TaskManagementSystem\\TaskManagementSystem.MVC\\Views\\Home\\KanbanBoard.cshtml",
+              "RelativeDocumentMoniker": "TaskManagementSystem.MVC\\Views\\Home\\KanbanBoard.cshtml",
+              "ToolTip": "C:\\Users\\Ilqar\\Desktop\\Final Project\\TaskManagementSystem\\TaskManagementSystem.MVC\\Views\\Home\\KanbanBoard.cshtml",
+              "RelativeToolTip": "TaskManagementSystem.MVC\\Views\\Home\\KanbanBoard.cshtml",
+              "ViewState": "AgIAACYAAAAAAAAAAAAMwE4AAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-12T22:56:50.819Z",
+              "WhenOpened": "2025-02-22T18:55:14.527Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\Ilqar\\Desktop\\Final Project\\TaskManagementSystem\\TaskManagementSystem.MVC\\Areas\\Admin\\Views\\Date\\Create.cshtml",
-              "RelativeDocumentMoniker": "TaskManagementSystem.MVC\\Areas\\Admin\\Views\\Date\\Create.cshtml",
-              "ToolTip": "C:\\Users\\Ilqar\\Desktop\\Final Project\\TaskManagementSystem\\TaskManagementSystem.MVC\\Areas\\Admin\\Views\\Date\\Create.cshtml",
-              "RelativeToolTip": "TaskManagementSystem.MVC\\Areas\\Admin\\Views\\Date\\Create.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Ilqar\\Desktop\\Final Project\\TaskManagementSystem\\TaskManagementSystem.MVC\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "TaskManagementSystem.MVC\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Ilqar\\Desktop\\Final Project\\TaskManagementSystem\\TaskManagementSystem.MVC\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "TaskManagementSystem.MVC\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAIoAAAAAAAAAAAAMwJcAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-12T22:52:42.26Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "BaseEntity.cs",
-              "DocumentMoniker": "C:\\Users\\Ilqar\\Desktop\\Final Project\\TaskManagementSystem\\TaskManagementSystem.CORE\\Entities\\Commons\\BaseEntity.cs",
-              "RelativeDocumentMoniker": "TaskManagementSystem.CORE\\Entities\\Commons\\BaseEntity.cs",
-              "ToolTip": "C:\\Users\\Ilqar\\Desktop\\Final Project\\TaskManagementSystem\\TaskManagementSystem.CORE\\Entities\\Commons\\BaseEntity.cs",
-              "RelativeToolTip": "TaskManagementSystem.CORE\\Entities\\Commons\\BaseEntity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T22:49:21.104Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "_AdminLayout.cshtml",
-              "DocumentMoniker": "C:\\Users\\Ilqar\\Desktop\\Final Project\\TaskManagementSystem\\TaskManagementSystem.MVC\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
-              "RelativeDocumentMoniker": "TaskManagementSystem.MVC\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
-              "ToolTip": "C:\\Users\\Ilqar\\Desktop\\Final Project\\TaskManagementSystem\\TaskManagementSystem.MVC\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
-              "RelativeToolTip": "TaskManagementSystem.MVC\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
-              "ViewState": "AgIAADYAAAAAAAAAAAAUwD4AAABMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-12T22:14:41.013Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\Ilqar\\Desktop\\Final Project\\TaskManagementSystem\\TaskManagementSystem.MVC\\Areas\\Admin\\Views\\Reminder\\Create.cshtml",
-              "RelativeDocumentMoniker": "TaskManagementSystem.MVC\\Areas\\Admin\\Views\\Reminder\\Create.cshtml",
-              "ToolTip": "C:\\Users\\Ilqar\\Desktop\\Final Project\\TaskManagementSystem\\TaskManagementSystem.MVC\\Areas\\Admin\\Views\\Reminder\\Create.cshtml",
-              "RelativeToolTip": "TaskManagementSystem.MVC\\Areas\\Admin\\Views\\Reminder\\Create.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-12T22:11:37.992Z",
+              "WhenOpened": "2025-02-22T18:27:15.963Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "ReminderController.cs",
-              "DocumentMoniker": "C:\\Users\\Ilqar\\Desktop\\Final Project\\TaskManagementSystem\\TaskManagementSystem.MVC\\Areas\\Admin\\Controllers\\ReminderController.cs",
-              "RelativeDocumentMoniker": "TaskManagementSystem.MVC\\Areas\\Admin\\Controllers\\ReminderController.cs",
-              "ToolTip": "C:\\Users\\Ilqar\\Desktop\\Final Project\\TaskManagementSystem\\TaskManagementSystem.MVC\\Areas\\Admin\\Controllers\\ReminderController.cs",
-              "RelativeToolTip": "TaskManagementSystem.MVC\\Areas\\Admin\\Controllers\\ReminderController.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAmwBsAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T22:09:08.29Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DateController.cs",
-              "DocumentMoniker": "C:\\Users\\Ilqar\\Desktop\\Final Project\\TaskManagementSystem\\TaskManagementSystem.MVC\\Areas\\Admin\\Controllers\\DateController.cs",
-              "RelativeDocumentMoniker": "TaskManagementSystem.MVC\\Areas\\Admin\\Controllers\\DateController.cs",
-              "ToolTip": "C:\\Users\\Ilqar\\Desktop\\Final Project\\TaskManagementSystem\\TaskManagementSystem.MVC\\Areas\\Admin\\Controllers\\DateController.cs",
-              "RelativeToolTip": "TaskManagementSystem.MVC\\Areas\\Admin\\Controllers\\DateController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAwAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T21:18:12.876Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "DateReminderDto.cs",
-              "DocumentMoniker": "C:\\Users\\Ilqar\\Desktop\\Final Project\\TaskManagementSystem\\TaskManagementSystem.BL\\DTOs\\ReminderDTOs\\DateReminderDto.cs",
-              "RelativeDocumentMoniker": "TaskManagementSystem.BL\\DTOs\\ReminderDTOs\\DateReminderDto.cs",
-              "ToolTip": "C:\\Users\\Ilqar\\Desktop\\Final Project\\TaskManagementSystem\\TaskManagementSystem.BL\\DTOs\\ReminderDTOs\\DateReminderDto.cs",
-              "RelativeToolTip": "TaskManagementSystem.BL\\DTOs\\ReminderDTOs\\DateReminderDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T22:22:51.068Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "DashboardController.cs",
-              "DocumentMoniker": "C:\\Users\\Ilqar\\Desktop\\Final Project\\TaskManagementSystem\\TaskManagementSystem.MVC\\Areas\\Admin\\Controllers\\DashboardController.cs",
-              "RelativeDocumentMoniker": "TaskManagementSystem.MVC\\Areas\\Admin\\Controllers\\DashboardController.cs",
-              "ToolTip": "C:\\Users\\Ilqar\\Desktop\\Final Project\\TaskManagementSystem\\TaskManagementSystem.MVC\\Areas\\Admin\\Controllers\\DashboardController.cs",
-              "RelativeToolTip": "TaskManagementSystem.MVC\\Areas\\Admin\\Controllers\\DashboardController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T22:16:37.071Z",
+              "Title": "Calendar.cshtml",
+              "DocumentMoniker": "C:\\Users\\Ilqar\\Desktop\\Final Project\\TaskManagementSystem\\TaskManagementSystem.MVC\\Views\\Home\\Calendar.cshtml",
+              "RelativeDocumentMoniker": "TaskManagementSystem.MVC\\Views\\Home\\Calendar.cshtml",
+              "ToolTip": "C:\\Users\\Ilqar\\Desktop\\Final Project\\TaskManagementSystem\\TaskManagementSystem.MVC\\Views\\Home\\Calendar.cshtml",
+              "RelativeToolTip": "TaskManagementSystem.MVC\\Views\\Home\\Calendar.cshtml",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAAAIIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-22T18:26:55.574Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "DateReminder.cs",
-              "DocumentMoniker": "C:\\Users\\Ilqar\\Desktop\\Final Project\\TaskManagementSystem\\TaskManagementSystem.CORE\\Entities\\Notfications\\DateReminder.cs",
-              "RelativeDocumentMoniker": "TaskManagementSystem.CORE\\Entities\\Notfications\\DateReminder.cs",
-              "ToolTip": "C:\\Users\\Ilqar\\Desktop\\Final Project\\TaskManagementSystem\\TaskManagementSystem.CORE\\Entities\\Notfications\\DateReminder.cs",
-              "RelativeToolTip": "TaskManagementSystem.CORE\\Entities\\Notfications\\DateReminder.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAkwAoAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T21:30:10.612Z",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Ilqar\\Desktop\\Final Project\\TaskManagementSystem\\TaskManagementSystem.MVC\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "TaskManagementSystem.MVC\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Ilqar\\Desktop\\Final Project\\TaskManagementSystem\\TaskManagementSystem.MVC\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "TaskManagementSystem.MVC\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-22T14:33:39.032Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "DateCreateDto.cs",
-              "DocumentMoniker": "C:\\Users\\Ilqar\\Desktop\\Final Project\\TaskManagementSystem\\TaskManagementSystem.BL\\DTOs\\DatePlannerDTOs\\DateCreateDto.cs",
-              "RelativeDocumentMoniker": "TaskManagementSystem.BL\\DTOs\\DatePlannerDTOs\\DateCreateDto.cs",
-              "ToolTip": "C:\\Users\\Ilqar\\Desktop\\Final Project\\TaskManagementSystem\\TaskManagementSystem.BL\\DTOs\\DatePlannerDTOs\\DateCreateDto.cs",
-              "RelativeToolTip": "TaskManagementSystem.BL\\DTOs\\DatePlannerDTOs\\DateCreateDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T21:19:59.726Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Ilqar\\Desktop\\Final Project\\TaskManagementSystem\\TaskManagementSystem.MVC\\Program.cs",
-              "RelativeDocumentMoniker": "TaskManagementSystem.MVC\\Program.cs",
-              "ToolTip": "C:\\Users\\Ilqar\\Desktop\\Final Project\\TaskManagementSystem\\TaskManagementSystem.MVC\\Program.cs",
-              "RelativeToolTip": "TaskManagementSystem.MVC\\Program.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAgwCsAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T18:30:49.981Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\Ilqar\\Desktop\\Final Project\\TaskManagementSystem\\TaskManagementSystem.MVC\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "TaskManagementSystem.MVC\\Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\Ilqar\\Desktop\\Final Project\\TaskManagementSystem\\TaskManagementSystem.MVC\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "TaskManagementSystem.MVC\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAAHgAAAAAAAAAAAAgwIEAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-10T19:44:46.029Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\Ilqar\\Desktop\\Final Project\\TaskManagementSystem\\TaskManagementSystem.MVC\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "TaskManagementSystem.MVC\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\Ilqar\\Desktop\\Final Project\\TaskManagementSystem\\TaskManagementSystem.MVC\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "TaskManagementSystem.MVC\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAYwAwAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-10T15:23:55.916Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ChatHub.cs",
-              "DocumentMoniker": "C:\\Users\\Ilqar\\Desktop\\Final Project\\TaskManagementSystem\\TaskManagementSystem.MVC\\SignalR\\Hubs\\ChatHub.cs",
-              "RelativeDocumentMoniker": "TaskManagementSystem.MVC\\SignalR\\Hubs\\ChatHub.cs",
-              "ToolTip": "C:\\Users\\Ilqar\\Desktop\\Final Project\\TaskManagementSystem\\TaskManagementSystem.MVC\\SignalR\\Hubs\\ChatHub.cs",
-              "RelativeToolTip": "TaskManagementSystem.MVC\\SignalR\\Hubs\\ChatHub.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-10T14:59:30.885Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 5,
               "Title": "Chat.cshtml",
               "DocumentMoniker": "C:\\Users\\Ilqar\\Desktop\\Final Project\\TaskManagementSystem\\TaskManagementSystem.MVC\\Views\\Home\\Chat.cshtml",
               "RelativeDocumentMoniker": "TaskManagementSystem.MVC\\Views\\Home\\Chat.cshtml",
               "ToolTip": "C:\\Users\\Ilqar\\Desktop\\Final Project\\TaskManagementSystem\\TaskManagementSystem.MVC\\Views\\Home\\Chat.cshtml",
               "RelativeToolTip": "TaskManagementSystem.MVC\\Views\\Home\\Chat.cshtml",
-              "ViewState": "AgIAAMYAAAAAAAAAAAAAAKsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADYBAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-10T15:22:02.777Z",
+              "WhenOpened": "2025-02-22T14:16:17.309Z",
               "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedHeight": 25,
-          "SelectedChildIndex": -1,
-          "Children": [
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ReminderController.cs",
+              "DocumentMoniker": "C:\\Users\\Ilqar\\Desktop\\Final Project\\TaskManagementSystem\\TaskManagementSystem.MVC\\Areas\\Admin\\Controllers\\ReminderController.cs",
+              "RelativeDocumentMoniker": "TaskManagementSystem.MVC\\Areas\\Admin\\Controllers\\ReminderController.cs",
+              "ToolTip": "C:\\Users\\Ilqar\\Desktop\\Final Project\\TaskManagementSystem\\TaskManagementSystem.MVC\\Areas\\Admin\\Controllers\\ReminderController.cs",
+              "RelativeToolTip": "TaskManagementSystem.MVC\\Areas\\Admin\\Controllers\\ReminderController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-22T10:12:29.477Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Ilqar\\Desktop\\Final Project\\TaskManagementSystem\\TaskManagementSystem.MVC\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "TaskManagementSystem.MVC\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Ilqar\\Desktop\\Final Project\\TaskManagementSystem\\TaskManagementSystem.MVC\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "TaskManagementSystem.MVC\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAUwB8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-15T18:46:26.237Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "apps-calendar.js",
+              "DocumentMoniker": "C:\\Users\\Ilqar\\Desktop\\Final Project\\TaskManagementSystem\\TaskManagementSystem.MVC\\wwwroot\\assets\\js\\pages\\apps-calendar.js",
+              "RelativeDocumentMoniker": "TaskManagementSystem.MVC\\wwwroot\\assets\\js\\pages\\apps-calendar.js",
+              "ToolTip": "C:\\Users\\Ilqar\\Desktop\\Final Project\\TaskManagementSystem\\TaskManagementSystem.MVC\\wwwroot\\assets\\js\\pages\\apps-calendar.js",
+              "RelativeToolTip": "TaskManagementSystem.MVC\\wwwroot\\assets\\js\\pages\\apps-calendar.js",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwCQAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-02-15T18:39:07.655Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"

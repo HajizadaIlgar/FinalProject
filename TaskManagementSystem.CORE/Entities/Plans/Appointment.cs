@@ -15,6 +15,7 @@ namespace TaskManagementSystem.CORE.Entities.Plans
         public DateStatus Status { get; set; } = DateStatus.Scheduled; // Görüşün statusu
         public string Host { get; set; }            // Görüşün təşkilatçısı
         public string? Notes { get; set; }           // Qeydlər
+        public string? HostEmail { get; set; }
     }
 
 
