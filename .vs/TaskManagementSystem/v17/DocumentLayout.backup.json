@@ -42,8 +42,12 @@
       "DocumentGroups": [
         {
           "DockedHeight": 25,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -67,8 +71,7 @@
               "RelativeToolTip": "TaskManagementSystem.MVC\\Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAAIoAAAAAAAAAAAAMwJcAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-22T18:27:15.963Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-22T18:27:15.963Z"
             },
             {
               "$type": "Document",
@@ -80,8 +83,7 @@
               "RelativeToolTip": "TaskManagementSystem.MVC\\Views\\Home\\Calendar.cshtml",
               "ViewState": "AgIAAHAAAAAAAAAAAAAAAIIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-22T18:26:55.574Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-22T18:26:55.574Z"
             },
             {
               "$type": "Document",
@@ -93,8 +95,7 @@
               "RelativeToolTip": "TaskManagementSystem.MVC\\Views\\Home\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-22T14:33:39.032Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-22T14:33:39.032Z"
             },
             {
               "$type": "Document",
@@ -106,8 +107,7 @@
               "RelativeToolTip": "TaskManagementSystem.MVC\\Views\\Home\\Chat.cshtml",
               "ViewState": "AgIAADYBAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-22T14:16:17.309Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-22T14:16:17.309Z"
             },
             {
               "$type": "Document",
@@ -119,8 +119,7 @@
               "RelativeToolTip": "TaskManagementSystem.MVC\\Areas\\Admin\\Controllers\\ReminderController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-22T10:12:29.477Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-22T10:12:29.477Z"
             },
             {
               "$type": "Document",
@@ -132,8 +131,7 @@
               "RelativeToolTip": "TaskManagementSystem.MVC\\Controllers\\HomeController.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAAUwB8AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-15T18:46:26.237Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-15T18:46:26.237Z"
             },
             {
               "$type": "Document",
@@ -145,12 +143,7 @@
               "RelativeToolTip": "TaskManagementSystem.MVC\\wwwroot\\assets\\js\\pages\\apps-calendar.js",
               "ViewState": "AgIAAAsAAAAAAAAAAAAQwCQAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-02-15T18:39:07.655Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+              "WhenOpened": "2025-02-15T18:39:07.655Z"
             }
           ]
         }
