@@ -1,0 +1,22 @@
+﻿@using TaskManagementSystem.BL.DTOs.TaskDTOs
+@model TaskStatusCreateDto
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Brand create</h6>
+    </div>
+    <div class="card-body">
+        <form enctype="multipart/form-data" method="post">
+            <div class="form-group">
+                <label asp-for="TaskStatus"></label>
+                <input class="form-control" asp-for="TaskStatus">
+                <span class="text-danger" asp-validation-for="TaskStatus"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
+

@@ -1,6 +1,9 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SignalR;
+using System.Security.Claims;
 using TaskManagementSystem.BL.DTOs.AccountDTOs;
 using TaskManagementSystem.BL.Extensions;
 using TaskManagementSystem.BL.Services.Abstracts;
@@ -100,6 +103,7 @@ namespace TaskManagementSystem.MVC.Controllers
         }
         public async Task<IActionResult> MyRoleMethod()
         {
+
             foreach (Roles item in Enum.GetValues(typeof(Roles)))
             {
                 var roleName = item.AddRole();
@@ -112,7 +116,21 @@ namespace TaskManagementSystem.MVC.Controllers
                     }
                 }
             }
+            AppUser user = new AppUser
+            {
+                UserName = "Admin",
+                FullName = "adminadmin",
+                Email = "admin@mail.com",
+                ProfileImagerlUrl = "swniyoyf.sqs22.png"
+            };
+            var superAdmin = await _userManager.CreateAsync(user, "123456");
+            var superAdminRole = await _userManager.AddToRoleAsync(user, Roles.Admin.AddRole());
+
             return Ok();
+        }
+        public async Task<IActionResult> AccessDenied()
+        {
+            return View();
         }
 
         [Route("api/user/current")]
@@ -131,5 +149,39 @@ namespace TaskManagementSystem.MVC.Controllers
             });
         }
 
+        public async Task AddClaims(string id, string name, string image)
+        {
+            // Null yoxlanışı əlavə et
+            if (string.IsNullOrEmpty(name))
+            {
+                throw new ArgumentNullException(nameof(name), "User name cannot be null or empty");
+            }
+
+            if (string.IsNullOrEmpty(image))
+            {
+                image = "default-image-path";  // Əgər şəkil boşdursa, bir default şəkil təyin et
+            }
+
+            List<Claim> claims = new List<Claim>
+            {
+                new Claim(ClaimTypes.NameIdentifier, id),
+                new Claim(ClaimTypes.Name, name),
+                new Claim("image", image)
+            };
+
+            var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+            var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
+
+            await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, claimsPrincipal);
+        }
+
+        private bool Authorize()
+        {
+            if (!HttpContext.Session.Keys.Any(x => x == "user"))
+            {
+                return false;
+            }
+            return true;
+        }
     }
 }

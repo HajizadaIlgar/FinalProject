@@ -1,0 +1,51 @@
+﻿@using TaskManagementSystem.CORE.Entities.Tasks
+@model ICollection<TaskItem>
+
+@{
+    ViewData["Title"] = "Task List";
+}
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Task List</h6>
+    </div>
+    <div class="card-body">
+        <a href="@Url.Action("Create", "Task")" class="btn btn-primary mb-3">Create New Task</a>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Deadline</th>
+                    <th>Assigned User</th> <!-- Yeni sütun əlavə etdik -->
+                    <th>Status</th>
+                        <th style="text-align:center" colspan="2">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var task in Model)
+                {
+                    <tr>
+                        <td>@task.Title</td>
+                        <td>@task.Description</td>
+                        <td>@task.DeadLine.ToShortDateString()</td>
+                        <td>
+                            @if (task.TaskAssignments != null && task.TaskAssignments.Any())
+                            {
+                                <span>@task.Users.FirstOrDefault()</span>
+                            }
+                            else
+                            {
+                                <span>No user assigned</span>
+                            }
+                        </td>
+
+                        <td>@task.Status?.TaskStatus</td>
+                            <td><a class="btn btn-success" asp-controller="Task" asp-action="Update" asp-route-id="@task.Id">Dəyiş</a></td>
+                            <td><a class="btn btn-success" asp-controller="Task" asp-action="Delete" asp-route-id="@task.Id">Sil</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

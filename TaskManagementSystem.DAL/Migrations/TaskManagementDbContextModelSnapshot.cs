@@ -490,6 +490,39 @@ namespace TaskManagementSystem.DAL.Migrations
                     b.ToTable("Tags");
                 });
 
+            modelBuilder.Entity("TaskManagementSystem.CORE.Entities.Tasks.TaskAssignment", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("AssignedByAdminId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("AssignedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("TaskId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("TaskItemId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("TaskItemId");
+
+                    b.HasIndex("TaskId", "UserId");
+
+                    b.ToTable("TaskAssignments");
+                });
+
             modelBuilder.Entity("TaskManagementSystem.CORE.Entities.Tasks.TaskItem", b =>
                 {
                     b.Property<int>("Id")
@@ -534,6 +567,10 @@ namespace TaskManagementSystem.DAL.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("UpdatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UsersId")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -635,6 +672,9 @@ namespace TaskManagementSystem.DAL.Migrations
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("TaskAssignmentId")
+                        .HasColumnType("int");
+
                     b.Property<bool>("TwoFactorEnabled")
                         .HasColumnType("bit");
 
@@ -651,6 +691,8 @@ namespace TaskManagementSystem.DAL.Migrations
                         .IsUnique()
                         .HasDatabaseName("UserNameIndex")
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
+
+                    b.HasIndex("TaskAssignmentId");
 
                     b.ToTable("AspNetUsers", (string)null);
                 });
@@ -784,6 +826,13 @@ namespace TaskManagementSystem.DAL.Migrations
                     b.Navigation("Task");
                 });
 
+            modelBuilder.Entity("TaskManagementSystem.CORE.Entities.Tasks.TaskAssignment", b =>
+                {
+                    b.HasOne("TaskManagementSystem.CORE.Entities.Tasks.TaskItem", null)
+                        .WithMany("TaskAssignments")
+                        .HasForeignKey("TaskItemId");
+                });
+
             modelBuilder.Entity("TaskManagementSystem.CORE.Entities.Tasks.TaskItem", b =>
                 {
                     b.HasOne("TaskManagementSystem.CORE.Entities.Categories.Category", null)
@@ -797,6 +846,13 @@ namespace TaskManagementSystem.DAL.Migrations
                         .IsRequired();
 
                     b.Navigation("Status");
+                });
+
+            modelBuilder.Entity("TaskManagementSystem.CORE.Entities.Users.AppUser", b =>
+                {
+                    b.HasOne("TaskManagementSystem.CORE.Entities.Tasks.TaskAssignment", null)
+                        .WithMany("User")
+                        .HasForeignKey("TaskAssignmentId");
                 });
 
             modelBuilder.Entity("TaskManagementSystem.CORE.Entities.Categories.Category", b =>
@@ -814,9 +870,16 @@ namespace TaskManagementSystem.DAL.Migrations
                     b.Navigation("Reminders");
                 });
 
+            modelBuilder.Entity("TaskManagementSystem.CORE.Entities.Tasks.TaskAssignment", b =>
+                {
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("TaskManagementSystem.CORE.Entities.Tasks.TaskItem", b =>
                 {
                     b.Navigation("Notfications");
+
+                    b.Navigation("TaskAssignments");
                 });
 
             modelBuilder.Entity("TaskManagementSystem.CORE.Entities.Tasks.TaskItemStatus", b =>

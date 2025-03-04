@@ -1,0 +1,35 @@
+﻿@using TaskManagementSystem.CORE.Entities.Tasks
+@model List<TaskItemStatus>
+
+@{
+    ViewData["Title"] = "Task Status List";
+}
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Task Status List</h6>
+    </div>
+    <div class="card-body">
+        <a href="@Url.Action("Create", "TaskStatus")" class="btn btn-primary mb-3">Create New Status</a>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Task Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var status in Model)
+                {
+                    <tr>
+                        <td>@status.TaskStatus</td>
+                        <td>
+                            <a href="@Url.Action("Edit", "TaskStatus", new { id = status.Id })" class="btn btn-warning btn-sm">Edit</a>
+                            <a href="@Url.Action("Delete", "TaskStatus", new { id = status.Id })" class="btn btn-danger btn-sm">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

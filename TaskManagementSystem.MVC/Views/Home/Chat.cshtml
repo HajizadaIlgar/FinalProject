@@ -82,14 +82,16 @@
             margin-bottom: 8px; /* Mesajların arasında məsafə */
         }
 
-            .message.sent {
+             .sent {
                 align-self: flex-end; /* Sənin mesajlarını sağ tərəfə göndər */
-                background-color: #d1e7ff; /* Sənin mesajlarının rəngi */
+                background-color: #d1e7ff; /* Sənin mesajlarının rəngi */;
+             
             }
 
             .message.received {
                 align-self: flex-start; /* Qarşı tərəfin mesajları solda */
                 background-color: #f1f1f1; /* Qarşı tərəfin mesajlarının rəngi */
+
             }
 
             .message img {
@@ -174,6 +176,7 @@
         <div id="chat-section" class="w-3/4 bg-white p-4 flex flex-col h-full">
             <!-- Mesajlar -->
             <div id="message-list" class="flex-1 space-y-2 overflow-y-auto mb-4 p-2 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-lg shadow-xl">
+         <div class="message received">Salam</div>
             </div>
 
 
@@ -194,12 +197,13 @@
                 .build();
 
             let currentUser = null;
-
+            let my_name = "";
             async function getCurrentUser() {
                 try {
                     const response = await fetch("/api/user/current");
                     if (!response.ok) throw new Error("İstifadəçi tapılmadı");
                     const user = await response.json();
+                   
                     return user.userName 
                 } catch (error) {
                     console.error("İstifadəçi məlumatı alınmadı:", error);
@@ -208,6 +212,7 @@
             }
             connection.on("UserOnline", (userName) => {
                 console.log(`User Online: ${userName}`);
+                my_name = userName;
                 const userElement = document.querySelector(`[data-user-id="${userName}"]`);
                 if (userElement) {
                     const statusElement = userElement.querySelector(".status");
@@ -273,7 +278,8 @@
                 if (messageList) {
                     const messageElement = document.createElement("div");
                     messageElement.classList.add("message");
-
+                   
+                    //div>message received>strong
                     // Profil şəkli əlavə edilir
                     const profileImage = document.createElement("img");
                     profileImage.src = profileImageUrl ? `/account/${profileImageUrl}` : "/account/mxelvvic.d55images.jpg";
@@ -287,8 +293,10 @@
                     messageContent.innerHTML = `<strong>${user}:</strong> ${message}`;
 
                     // Mesajın kimə aid olduğunu təyin edirik
-                    const isSentByUser = user === "CurrentUser";  // Burada "CurrentUser" yerinə real istifadəçi adı ilə müqayisə edə bilərsiniz
-                    if (isSentByUser) {
+                    //  const isSentByUser = user === "CurrentUser";  Burada "CurrentUser" yerinə real istifadəçi adı ilə müqayisə edə bilərsiniz
+                    console.log("Blyett"+my_name);
+                    console.log("Blyet"+user)
+                    if (my_name[0]===user) {
                         messageElement.classList.add("sent");
                     } else {
                         messageElement.classList.add("received");

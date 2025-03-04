@@ -14,7 +14,8 @@ namespace TaskManagementSystem.CORE.Entities.Tasks
         public int StatusId { get; set; }
         public ICollection<Tag> Tags { get; set; }
         public ICollection<AppUser> Users { get; set; }
-        public ICollection<Notfication> Notfications { get; set; }
-
+        public string UsersId { get; set; }
+        public ICollection<TaskAssignment> TaskAssignments { get; set; }
+        public ICollection<Notfication>? Notfications { get; set; }
     }
 }

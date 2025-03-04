@@ -1,0 +1,46 @@
+﻿@using TaskManagementSystem.BL.DTOs.TaskDTOs
+@model TaskItemCreateDto
+@{
+    ViewData["Title"] = "Yeni Task Yarat";
+}
+
+<h2>Yeni Task</h2>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label for="Title">Başlıq</label>
+        <input asp-for="Title" class="form-control" required />
+    </div>
+
+    <div class="form-group">
+        <label for="Description">Açıqlama</label>
+        <textarea asp-for="Description" class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="DueDate">Son Tarix</label>
+        <input asp-for="DeadLine" type="date" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label for="StatusId">Task Statusu Seç</label>
+        <select asp-for="StatusId" class="form-control">
+            <option value="">Heç kim</option>
+            @foreach (var status in ViewBag.TaskStatus)
+            {
+                <option value="@status.Id">@status.TaskStatus</option>
+            }
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="UserId">İstifadəçi seç</label>
+        <select asp-for="UserId" class="form-control">
+            <option value="">Heç kim</option>
+            @foreach (var user in ViewBag.Users)
+            {
+                <option value="@user.Id">@user.UserName</option>
+            }
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-2">Yarat</button>
+</form>

@@ -5,5 +5,5 @@ namespace TaskManagementSystem.CORE.Entities.Tasks;
 public class TaskItemStatus : BaseEntity
 {
     public string TaskStatus { get; set; }
-    public ICollection<TaskItem> TaskItems { get; set; }
+    public ICollection<TaskItem>? TaskItems { get; set; }
 }

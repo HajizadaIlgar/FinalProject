@@ -86,7 +86,7 @@
                     <li class="menu-title">Apps</li>
 
                     <li class="menu-item">
-                        <a asp-controller="Home" asp-action="Calendar" class="menu-link">
+                        <a asp-controller="Home" asp-action="Calendars" class="menu-link">
                             <span class="menu-icon">
                                 <i class="ri-calendar-event-line"></i>
                             </span>
@@ -1112,7 +1112,6 @@
                 @if (User.Identity!.IsAuthenticated)
                 {
                     <div class="relative">
-                        @* Yalnız aktiv hesabı göstər *@
                         @{
                             var activeUser = Model.AppUsers.FirstOrDefault(u => u.UserName == User.Identity.Name);
                             if (activeUser != null)
@@ -1121,19 +1120,18 @@
                                     <img src="~/account/@activeUser.ProfileImagerlUrl" alt="user-image" class="rounded-full h-8">
                                     <span class="md:flex flex-col gap-0.5 text-start hidden">
                                         <h5 class="text-sm">@activeUser.FullName</h5>
-                                        @if (User.IsInRole("Admin"))
+                                        @if (User.IsInRole("User"))
                                         {
-                                            <span class="text-xs">Admin</span>
+                                            <span class="text-xs">User</span>
                                         }
                                         else
                                         {
-                                            <span class="text-xs">User</span>
+                                            <span class="text-xs">Admin</span>
                                         }
                                     </span>
                                 </button>
                             }
                         }
-
                         <div class="fc-dropdown fc-dropdown-open:opacity-100 hidden opacity-0 w-44 z-50 transition-all duration-300 bg-white shadow-lg border rounded-lg py-2 border-gray-200 dark:border-gray-700 dark:bg-gray-800">
                             <!-- item-->
                             <h6 class="flex items-center py-2 px-3 text-xs text-gray-800 dark:text-gray-400">Welcome !</h6>

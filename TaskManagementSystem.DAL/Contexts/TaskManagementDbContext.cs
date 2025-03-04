@@ -16,6 +16,7 @@ public class TaskManagementDbContext : IdentityDbContext<AppUser>
     public TaskManagementDbContext(DbContextOptions<TaskManagementDbContext> opt) : base(opt) { }
     public DbSet<Category> Categories { get; set; }
     public DbSet<TaskItem> TaskItems { get; set; }
+    public DbSet<TaskAssignment> TaskAssignments { get; set; }
     public DbSet<TaskItemStatus> TaskItemsStatus { get; set; }
     public DbSet<Notfication> Notifications { get; set; }
     public DbSet<Comment> Comments { get; set; }
@@ -27,5 +28,14 @@ public class TaskManagementDbContext : IdentityDbContext<AppUser>
     {
         base.OnModelCreating(builder);
         builder.ApplyConfigurationsFromAssembly(typeof(TaskManagementDbContext).Assembly);
+
+        builder.Entity<TaskAssignment>()
+          .HasIndex(ta => new { ta.TaskId, ta.UserId });
+        //.IsUnique(); 
+
+        builder.Entity<TaskAssignment>()
+            .HasKey(ta => ta.Id);
     }
+
+
 }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TaskManagementSystem.DAL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fb8351cd3603a9afd53939129ad3fa759d90af98")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ea37f4f3623d6902de5818c9af36318355d1b18b")]
 [assembly: System.Reflection.AssemblyProductAttribute("TaskManagementSystem.DAL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TaskManagementSystem.DAL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
