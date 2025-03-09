@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using TaskManagementSystem.BL.DTOs.HomeDTOs;
 using TaskManagementSystem.BL.DTOs.TaskDTOs;
 using TaskManagementSystem.BL.Services.Abstracts;
 using TaskManagementSystem.CORE.Entities.Tasks;
@@ -14,14 +15,14 @@ namespace TaskManagementSystem.MVC.Areas.Admin.Controllers
     {
         public async Task<IActionResult> Index()
         {
-            var data = await _context.TaskItems
-                .Include(t => t.Status)
-                .Include(t => t.TaskAssignments)
-                .Include(x => x.Users)
-                .Where(x => !x.IsDeleted)
-                .ToListAsync();
 
-            return View(data);
+            HomeDto dto = new HomeDto();
+            dto.AppUsers = await _context.Users.ToListAsync();
+            dto.Appointments = await _context.Appointments.Where(x => !x.IsDeleted).ToListAsync();
+            dto.TaskAssignments = await _context.TaskAssignments.Include(x => x.User).ToListAsync();
+            dto.TaskItem = await _context.TaskItems.Include(t => t.Status).Include(x => x.TaskAssignments)
+                    .Include(t => t.Users).Where(x => !x.IsDeleted).ToListAsync();
+            return View(dto);
         }
         public async Task<IActionResult> Create()
         {
@@ -113,6 +114,7 @@ namespace TaskManagementSystem.MVC.Areas.Admin.Controllers
                 data.Description = dto.Description;
                 data.DeadLine = dto.DeadLine;
                 data.StatusId = dto.StatusId;
+                data.CreatedAt = DateTime.Now;
                 data.UsersId = dto.UserId;
                 await _context.SaveChangesAsync();
             }

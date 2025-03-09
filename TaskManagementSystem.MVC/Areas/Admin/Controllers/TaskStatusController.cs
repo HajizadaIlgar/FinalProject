@@ -29,5 +29,14 @@ namespace TaskManagementSystem.MVC.Areas.Admin.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (id == null) return BadRequest();
+            var data = await _context.TaskItemsStatus.Where(x => x.Id == id).FirstOrDefaultAsync();
+            if (data == null) return NotFound();
+            _context.TaskItemsStatus.Remove(data);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
     }
 }

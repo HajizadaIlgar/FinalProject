@@ -70,7 +70,7 @@ namespace TaskManagementSystem.MVC.Areas.Admin.Controllers
                             <p>Təsvir: {reminder.Appointment.DateName}</p>
                             <p>Mesaj: {reminder.Message}</p>";
 
-                _emailService.SendEMail(reminder.Appointment.HostEmail!, "Yeni Görüş Təyin Edildi", emailBody);
+                _emailService.SendEMail(reminder.Appointment.HostEmail!, "Xatirlatma", emailBody);
             }
         }
     }

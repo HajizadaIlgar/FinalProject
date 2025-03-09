@@ -1,0 +1,61 @@
+﻿@using TaskManagementSystem.BL.DTOs.DatePlannerDTOs
+@model DateCreateDto
+@{
+    ViewData["Title"] = "Görüşü Yenilə";
+}
+
+<h2>Görüşü Yenilə</h2>
+
+<!-- Form POST metoduyla Update Action-a göndərilir -->
+<form asp-action="Update" method="post">
+    
+    <div class="form-group mb-3">
+        <label asp-for="DateName" class="form-label">Görüşün Adı</label>
+        <input asp-for="DateName" class="form-control" />
+        <span asp-validation-for="DateName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="Description" class="form-label">Təsvir</label>
+        <textarea asp-for="Description" class="form-control"></textarea>
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="StartDate" class="form-label">Başlama Tarixi</label>
+        <input asp-for="StartDate" type="datetime-local" class="form-control" />
+        <span asp-validation-for="StartDate" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="EndDate" class="form-label">Bitmə Tarixi</label>
+        <input asp-for="EndDate" type="datetime-local" class="form-control" />
+        <span asp-validation-for="EndDate" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="Location" class="form-label">Yer</label>
+        <input asp-for="Location" class="form-control" />
+        <span asp-validation-for="Location" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="Host" class="form-label">Təşkilatçı</label>
+        <input asp-for="Host" class="form-control" />
+        <span asp-validation-for="Host" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="HostEmail" class="form-label">Təşkilatçının Email-i</label>
+        <input asp-for="HostEmail" type="email" class="form-control" />
+        <span asp-validation-for="HostEmail" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="Notes" class="form-label">Qeydlər</label>
+        <textarea asp-for="Notes" class="form-control"></textarea>
+        <span asp-validation-for="Notes" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Yenilə</button>
+</form>

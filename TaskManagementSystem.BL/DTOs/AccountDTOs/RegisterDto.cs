@@ -21,5 +21,7 @@ namespace TaskManagementSystem.BL.DTOs.AccountDTOs
         [Required, DataType(DataType.Password), Compare(nameof(Password))]
         public string RePassword { get; set; }
         public IFormFile ProfileImage {  get; set; }
+        
+        public string? PhoneNumber {  get; set; }
     }
 }

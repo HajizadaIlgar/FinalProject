@@ -27,8 +27,7 @@
                             <td>@item.Id</td>
                             <td>@item.TimeBefore</td>
                             <td>@item.Message</td>
-                            <td><a class="btn btn-success" asp-controller="Category" asp-action="Update" asp-route-id="@item.Id">Dəyiş</a></td>
-                            <td><a class="btn btn-danger" asp-controller="Category" asp-action="Delete" asp-route-id="@item.Id">Sil</a></td>
+                            <td><a class="btn btn-danger" asp-controller="Reminder" asp-action="Delete" asp-route-id="@item.Id">Sil</a></td>
                         </tr>
                     }
                 </tbody>

@@ -136,6 +136,10 @@ form .text h3 a:hover{
                 <input asp-for="Email" type="text" placeholder="Enter your email" required>
             </div>
             <div class="input-box">
+                <span asp-validation-for="PhoneNumber"> Phone Number</span>
+                <input asp-for="PhoneNumber" type="number" placeholder="Enter your number" required>
+            </div>
+            <div class="input-box">
                 <span asp-validation-for="Password"> Password</span>
                 <input asp-for="Password" type="password" placeholder="Create password" required>
             </div>

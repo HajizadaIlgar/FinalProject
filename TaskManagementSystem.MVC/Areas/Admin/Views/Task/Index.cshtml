@@ -1,5 +1,6 @@
-﻿@using TaskManagementSystem.CORE.Entities.Tasks
-@model ICollection<TaskItem>
+﻿@using TaskManagementSystem.BL.DTOs.HomeDTOs
+@using TaskManagementSystem.CORE.Entities.Tasks
+@model HomeDto
 
 @{
     ViewData["Title"] = "Task List";
@@ -11,6 +12,12 @@
     </div>
     <div class="card-body">
         <a href="@Url.Action("Create", "Task")" class="btn btn-primary mb-3">Create New Task</a>
+        @{
+            var assignedUsers = Model.AppUsers
+            .Where(user => !user.Email!.TrimStart().StartsWith("admin") &&
+            Model.TaskAssignments.Any(t => t.UserId == user.Id))
+            .ToList();
+        }
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -23,20 +30,19 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach (var task in Model)
+                @foreach (var task in Model.TaskItem)
                 {
                     <tr>
                         <td>@task.Title</td>
                         <td>@task.Description</td>
                         <td>@task.DeadLine.ToShortDateString()</td>
                         <td>
-                            @if (task.TaskAssignments != null && task.TaskAssignments.Any())
+                            @foreach (var user in assignedUsers)
                             {
-                                <span>@task.Users.FirstOrDefault()</span>
-                            }
-                            else
-                            {
-                                <span>No user assigned</span>
+                                if (user.Id == task.UsersId)
+                                {
+                                    <span>@user.UserName</span>
+                                }
                             }
                         </td>
 

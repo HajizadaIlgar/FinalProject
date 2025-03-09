@@ -50,4 +50,19 @@ public class HomeController(TaskManagementDbContext _context, UserManager<AppUse
                 .Include(t => t.Users).Where(x => !x.IsDeleted).ToListAsync();
         return View(dto);
     }
+    public async Task<IActionResult> MyProfile()
+    {
+        HomeDto dto = new HomeDto();
+        dto.Appointments = await _context.Appointments.Where(x => !x.IsDeleted).ToListAsync();
+        dto.AppUsers = await _context.Users.ToListAsync();
+        return View(dto);
+    }
+    public async Task<IActionResult> Analytics()
+    {
+        await _context.SaveChangesAsync();
+        HomeDto dto = new HomeDto();
+        dto.Appointments = await _context.Appointments.Where(x => !x.IsDeleted).ToListAsync();
+        dto.AppUsers = await _context.Users.ToListAsync();
+        return View(dto);
+    }
 }

@@ -20,7 +20,8 @@
             <th>Location</th>
             <th>Host</th>
             <th>Email</th>
-            <th>Actions</th>
+            <th>Status</th>
+            <th colspan="2">Actions</th>
         </tr>
     </thead>
     <tbody>
@@ -35,9 +36,9 @@
                 <td>@item.Location</td>
                 <td>@item.Host</td>
                 <td>@item.HostEmail</td>
-                <td>
-                    <a href="@Url.Action("Edit", "Date", new { id = item.Id })" class="action-button">Edit</a>
-                    <a href="@Url.Action("Delete", "Date", new { id = item.Id })" class="action-button delete">Delete</a>
+                <td>@item.Status</td>
+                <td><a class="btn btn-success" asp-controller="Date" asp-action="Update" asp-route-id="@item.Id">Dəyiş</a>
+                <a href="@Url.Action("Delete", "Date", new { id = item.Id })" class="action-button delete">Delete</a>
                 </td>
             </tr>
         }

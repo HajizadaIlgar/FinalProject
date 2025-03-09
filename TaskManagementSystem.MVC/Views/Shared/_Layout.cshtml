@@ -58,31 +58,16 @@
             <!--- Menu -->
             <div class="scrollbar" data-simplebar>
                 <ul class="menu" data-fc-type="accordion">
-                    <li class="menu-title">Navigation</li>
-
+                    <li class="menu-title">Dashboard</li>
+                            
                     <li class="menu-item">
-                        <a href="javascript:void(0)" data-fc-type="collapse" class="menu-link">
+                        <a asp-controller="Home" asp-action="Analytics" class="menu-link">
                             <span class="menu-icon">
                                 <i class="ri-home-4-line"></i>
                             </span>
-                            <span class="menu-text"> Dashboard </span>
-                            <span class="badge bg-success rounded-full">2</span>
+                            <span class="menu-text"> Analytics </span>
                         </a>
-
-                        <ul class="sub-menu hidden">
-                            <li class="menu-item">
-                                <a href="dashboard-analytics.html" class="menu-link">
-                                    <span class="menu-text">Analytics</span>
-                                </a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="index.html" class="menu-link">
-                                    <span class="menu-text">Ecommerce</span>
-                                </a>
-                            </li>
-                        </ul>
                     </li>
-
                     <li class="menu-title">Apps</li>
 
                     <li class="menu-item">
@@ -888,63 +873,15 @@
 
                 <!-- Language Dropdown Button -->
                 <div class="relative ms-auto">
-                    <button data-fc-type="dropdown" data-fc-placement="bottom-end" type="button" class="nav-link p-2 fc-dropdown">
-                        <span class="flex items-center gap-2">
-                            <img src="~/assets/images/flags/us.jpg" alt="flag-image" class="h-3">
-                            <div class="lg:block hidden">
-                                <span>English</span>
-                                <i class="ri-arrow-down-s-line"></i>
-                            </div>
-                        </span>
-                    </button>
+                  
 
-
-                    <div class="fc-dropdown fc-dropdown-open:opacity-100 hidden opacity-0 w-40 z-50 transition-all duration-300 bg-white dark:bg-gray-800 shadow-lg border border-gray-200 dark:border-gray-700 rounded-lg py-2">
-                        <!-- item-->
-                        <a href="javascript:void(0);" class="flex items-center gap-2.5 py-2 px-3 text-sm text-gray-800 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300">
-                            <img src="~/assets/images/flags/germany.jpg" alt="user-image" class="h-4">
-                            <span class="align-middle">German</span>
-                        </a>
-
-                        <!-- item-->
-                        <a href="javascript:void(0);" class="flex items-center gap-2.5 py-2 px-3 text-sm text-gray-800 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300">
-                            <img src="~/assets/images/flags/italy.jpg" alt="user-image" class="h-4">
-                            <span class="align-middle">Italian</span>
-                        </a>
-
-                        <!-- item-->
-                        <a href="javascript:void(0);" class="flex items-center gap-2.5 py-2 px-3 text-sm text-gray-800 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300">
-                            <img src="~/assets/images/flags/spain.jpg" alt="user-image" class="h-4">
-                            <span class="align-middle">Spanish</span>
-                        </a>
-
-                        <!-- item-->
-                        <a href="javascript:void(0);" class="flex items-center gap-2.5 py-2 px-3 text-sm text-gray-800 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300">
-                            <img src="~/assets/images/flags/russia.jpg" alt="user-image" class="h-4">
-                            <span class="align-middle">Russian</span>
-                        </a>
-                    </div>
                 </div>
 
                 <!-- Notification Bell Button -->
                 <div class="relative lg:flex hidden">
-                    <button data-fc-type="dropdown" data-fc-placement="bottom-end" type="button" class="nav-link p-2">
-                        <span class="sr-only">View notifications</span>
-                        <span class="flex items-center justify-center">
-                            <i class="ri-notification-3-line text-2xl"></i>
-                            <span class="absolute top-5 end-2.5 w-2 h-2 rounded-full bg-danger"></span>
-                        </span>
-                    </button>
+                   
                     <div class="fc-dropdown fc-dropdown-open:opacity-100 hidden opacity-0 w-80 z-50 transition-all duration-300 bg-white dark:bg-gray-800 shadow-lg border border-gray-200 dark:border-gray-700 rounded-lg">
 
-                        <div class="p-3 border-b border-gray-200 dark:border-gray-700">
-                            <div class="flex items-center justify-between">
-                                <h6 class="text-sm text-gray-500 dark:text-gray-200"> Notification</h6>
-                                <a href="javascript: void(0);" class="text-gray-500 dark:text-gray-200 underline">
-                                    <small>Clear All</small>
-                                </a>
-                            </div>
-                        </div>
 
                         <div class="py-4 h-80" data-simplebar>
 
@@ -1037,45 +974,7 @@
 
                 <!-- Apps Dropdown -->
                 <div class="relative lg:flex hidden">
-                    <button data-fc-type="dropdown" data-fc-placement="bottom-end" type="button" class="nav-link p-2">
-                        <span class="sr-only">Apps</span>
-                        <span class="flex items-center justify-center">
-                            <i class="ri-apps-2-line text-2xl"></i>
-                        </span>
-                    </button>
-                    <div class="fc-dropdown fc-dropdown-open:opacity-100 hidden opacity-0 w-80 z-50 transition-all duration-300 bg-white shadow-lg border rounded-lg p-2 border-gray-200 dark:border-gray-700 dark:bg-gray-800">
-                        <div class="grid grid-cols-3 gap-3">
-                            <a class="flex flex-col items-center justify-center gap-1.5 py-3 px-6 rounded-md text-sm text-gray-800 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="#">
-                                <img src="~/assets/images/brands/github.png" class="h-6" alt="Github">
-                                <span>GitHub</span>
-                            </a>
-
-                            <a class="flex flex-col items-center justify-center gap-1.5 py-3 px-6 rounded-md text-sm text-gray-800 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="#">
-                                <img src="~/assets/images/brands/bitbucket.png" class="h-6" alt="bitbucket">
-                                <span>Bitbucket</span>
-                            </a>
-
-                            <a class="flex flex-col items-center justify-center gap-1.5 py-3 px-6 rounded-md text-sm text-gray-800 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="#">
-                                <img src="~/assets/images/brands/dropbox.png" class="h-6" alt="dropbox">
-                                <span>Dropbox</span>
-                            </a>
-
-                            <a class="flex flex-col items-center justify-center gap-1.5 py-3 px-6 rounded-md text-sm text-gray-800 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="#">
-                                <img src="~/assets/images/brands/slack.png" class="h-6" alt="slack">
-                                <span>Slack</span>
-                            </a>
-
-                            <a class="flex flex-col items-center justify-center gap-1.5 py-3 px-6 rounded-md text-sm text-gray-800 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="#">
-                                <img src="~/assets/images/brands/dribbble.png" class="h-6" alt="dribbble">
-                                <span>Dribbble</span>
-                            </a>
-
-                            <a class="flex flex-col items-center justify-center gap-1.5 py-3 px-6 rounded-md text-sm text-gray-800 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="#">
-                                <img src="~/assets/images/brands/behance.png" class="h-6" alt="Behance">
-                                <span>Behance</span>
-                            </a>
-                        </div>
-                    </div>
+                   
                 </div>
 
                 <!-- Theme Setting Button -->
@@ -1137,7 +1036,7 @@
                             <h6 class="flex items-center py-2 px-3 text-xs text-gray-800 dark:text-gray-400">Welcome !</h6>
 
                             <!-- item-->
-                            <a href="pages-profile.html" class="flex items-center gap-2 py-1.5 px-4 text-sm text-gray-800 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300">
+                            <a asp-controller="Home" asp-action="MyProfile" class="flex items-center gap-2 py-1.5 px-4 text-sm text-gray-800 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300">
                                 <i class="ri-account-circle-line text-lg align-middle"></i>
                                 <span>My Account</span>
                             </a>
@@ -1148,7 +1047,7 @@
                                 <span>Settings</span>
                             </a>
 
-                            <!-- item-->
+                           @*  <!-- item-->
                             <a href="pages-faqs.html" class="flex items-center gap-2 py-1.5 px-4 text-sm text-gray-800 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300">
                                 <i class="ri-customer-service-2-line text-lg align-middle"></i>
                                 <span>Support</span>
@@ -1159,7 +1058,7 @@
                                 <i class="ri-lock-password-line text-lg align-middle"></i>
                                 <span>Lock Screen</span>
                             </a>
-
+ *@
                             <!-- item-->
                             <a asp-controller="Account" asp-action="LogOut" class="flex items-center gap-2 py-1.5 px-4 text-sm text-gray-800 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300">
                                 <i class="ri-logout-box-line text-lg align-middle"></i>

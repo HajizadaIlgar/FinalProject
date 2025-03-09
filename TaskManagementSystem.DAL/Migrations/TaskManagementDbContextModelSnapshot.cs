@@ -430,6 +430,9 @@ namespace TaskManagementSystem.DAL.Migrations
                     b.Property<string>("HostEmail")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<bool>("IsAttended")
+                        .HasColumnType("bit");
+
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 

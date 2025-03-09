@@ -16,6 +16,7 @@ namespace TaskManagementSystem.CORE.Entities.Plans
         public string Host { get; set; }            // Görüşün təşkilatçısı
         public string? Notes { get; set; }           // Qeydlər
         public string? HostEmail { get; set; }
+        public bool IsAttended { get; set; }
     }
 
 

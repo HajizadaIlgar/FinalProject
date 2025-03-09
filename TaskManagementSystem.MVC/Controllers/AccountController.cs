@@ -30,6 +30,7 @@ namespace TaskManagementSystem.MVC.Controllers
                 FullName = dto.UserName,
                 UserName = dto.UserName,
                 Email = dto.Email,
+                PhoneNumber = dto.PhoneNumber,
                 ProfileImagerlUrl = newFilePath
             };
             if (dto.ProfileImage is not null)

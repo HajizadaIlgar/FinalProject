@@ -17,7 +17,7 @@
             summary[eventDate] = (summary[eventDate] || 0) + 1;
         });
 
-        let summaryHtml = `<b>📌 Tasklar:</b> `;
+        let summaryHtml = `<b>📌 Events:</b> `;
         Object.keys(summary).forEach(date => {
             summaryHtml += `<span style="margin: 0 8px; padding: 4px 10px; background: white; color: black; border-radius: 6px; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">${date}: ${summary[date]}</span>`;
         });

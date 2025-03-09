@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7mg5BdtsFAncByU2uLx3g81hfBqIr3E3vY4vWSw7s7o=",
+  "Hash": "rVd823wpjcFgwk+gedHBtUEKfxUyzh6eRFMnSxCkDsQ=",
   "Source": "TaskManagementSystem.MVC",
   "BasePath": "_content/TaskManagementSystem.MVC",
   "Mode": "Default",
@@ -148,6 +148,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\account\\bgnfl21v.wyxpolat.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\Ilqar\\Desktop\\Final Project\\TaskManagementSystem\\TaskManagementSystem.MVC\\wwwroot\\account\\byq0kte2.kanrevan.jpeg",
+      "SourceId": "TaskManagementSystem.MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Ilqar\\Desktop\\Final Project\\TaskManagementSystem\\TaskManagementSystem.MVC\\wwwroot\\",
+      "BasePath": "_content/TaskManagementSystem.MVC",
+      "RelativePath": "account/byq0kte2.kanrevan.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\account\\byq0kte2.kanrevan.jpeg"
     },
     {
       "Identity": "C:\\Users\\Ilqar\\Desktop\\Final Project\\TaskManagementSystem\\TaskManagementSystem.MVC\\wwwroot\\account\\czlo5grx.41qimages.png",

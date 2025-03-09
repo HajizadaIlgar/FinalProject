@@ -1,9 +1,8 @@
-﻿@using TaskManagementSystem.BL.DTOs.HomeDTOs
-@using TaskManagementSystem.CORE.Entities.Tasks
-@model HomeDto
+﻿@model HomeDto
 @{
     ViewData["Title"] = "KanbanBoard";
 }
+
 <main class="p-6">
 
     <!-- Page Title Start -->
@@ -37,9 +36,9 @@
                     <h5 class="uppercase mb-4">ToDo (3)</h5>
                     <div class="flex flex-col gap-4 kanban-board custom-scroll overflow-x-hidden overflow-y-auto px-1 h-full" id="kanbanborad-one">
 
-                        <!-- Task Item -->
                             @foreach (var item in Model.TaskItem)
                             {
+                        <!-- Task Item -->
                         <div class="card cursor-pointer">
                                 <div class="p-6 my-4">
                                     <!-- my-4: yuxarı və aşağıya margin əlavə edir -->
@@ -54,36 +53,45 @@
 
                                     <div class="mt-5">
                                         <div style="margin-left:90px; gap:10px;" class="flex items-center space-x-3">
-                                            @foreach (var user in Model.AppUsers)
-                                            {
-                                                // Admin istifadəçilərini göstərməmək üçün şərt əlavə edilir
-                                                if (!user.Email.StartsWith("admin"))
-                                                {
+                                            @{
+                                                var assignedUsers = Model.AppUsers
+                                                .Where(user => !user.Email!.TrimStart().StartsWith("admin") &&
+                                                Model.TaskAssignments.Any(t => t.UserId == user.Id))
+                                                .ToList();
+                                            }
 
-                                                    <div class="-me-3">
+                                            @foreach (var user in assignedUsers)
+                                            {
+                                                if (user.Id==item.UsersId)
+                                                {
+                                                    <div class="relative group w-10 h-10">
                                                         <a href="javascript: void(0);" data-fc-type="tooltip" data-fc-placement="top">
-                                                            <img src="~/account/@user.ProfileImagerlUrl" alt="" class="rounded-full h-8 w-8 hover:-translate-y-0.5 transition-all duration-200">
+                                                            <img src="~/account/@user.ProfileImagerlUrl"
+                                                                 alt=""
+                                                                 class="absolute bottom-0 right-0 rounded-full h-8 w-8 hover:-translate-y-0.5 transition-all duration-200" style="margin-left:100px">
                                                         </a>
-                                                        <div class="bg-slate-700 hidden px-2 py-1 rounded transition-all text-white opacity-0 z-50" role="tooltip">
+                                                        <div class="absolute bottom-full right-0 transform translate-x-1/2 bg-slate-700 hidden px-2 py-1 rounded transition-all text-white opacity-0 group-hover:opacity-100 group-hover:block z-50" role="tooltip">
                                                             @user.UserName
-                                                            <div data-fc-arrow class="bg-slate-700 w-2.5 h-2.5 rotate-45 -z-10 rounded-[1px]"></div>
+                                                            <div class="absolute right-1/2 translate-x-1/2 top-full bg-slate-700 w-2.5 h-2.5 rotate-45 -z-10 rounded-[1px]"></div>
                                                         </div>
-                                                    </div> <!-- avatar-icon end -->
+                                                    </div>
+
                                                 }
                                             }
-                                            @if (Model.AppUsers.Count() > 9)
+
+                                            @if (assignedUsers.Count > 9)
                                             {
                                                 <div class="flex items-center">
                                                     <a href="javascript: void(0);" data-fc-type="tooltip" data-fc-placement="top">
                                                         <div class="bg-primary text-white font-medium flex items-center justify-center rounded-full h-8 w-8 hover:-translate-y-0.5 transition-all duration-200">
-                                                            +@Model.AppUsers.Count()
+                                                            +@assignedUsers.Count
                                                         </div>
                                                     </a>
                                                     <div class="bg-slate-700 hidden px-2 py-1 rounded transition-all text-white opacity-0 z-50" role="tooltip">
                                                         More +
                                                         <div data-fc-arrow class="bg-slate-700 w-2.5 h-2.5 rotate-45 -z-10 rounded-[1px]"></div>
                                                     </div>
-                                                </div> <!-- avatar-icon end -->
+                                                </div>
                                             }
                                         </div> <!-- flex end -->
                                     </div>
@@ -159,6 +167,7 @@
                                             // Admin istifadəçilərini göstərməmək üçün şərt əlavə edilir
                                             if (!user.Email.StartsWith("admin"))
                                             {
+
                                                 <div class="-me-3">
                                                     <a href="javascript: void(0);" data-fc-type="tooltip" data-fc-placement="top">
                                                         <img src="~/account/@user.ProfileImagerlUrl" alt="" class="rounded-full h-8 w-8 hover:-translate-y-0.5 transition-all duration-200">

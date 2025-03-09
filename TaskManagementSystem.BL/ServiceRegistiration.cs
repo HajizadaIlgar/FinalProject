@@ -20,6 +20,7 @@ public static class ServiceRegistiration
         services.AddScoped<ICategoryService, CategoryService>();
         services.AddScoped<IEmailService, EmailService>();
         services.AddHostedService<ReminderCheckService>();
+        services.AddScoped<IAppointmentStatusUpdater, AppointmentStatusUpdater>();
         return services;
     }
 }
